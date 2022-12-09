@@ -1,8 +1,19 @@
-# Webpack React TS Boilerplate
+# Valentine Samoylov's personal website
+
+This is my portfolio website where you can find my works and contact information.
+
+## Credits (In order of appearance)
+
+- Libraries: [React Icon Cloud](https://www.npmjs.com/package/react-icon-cloud), [Swiper](https://www.npmjs.com/package/swiper)
+- Main screen backgrounds images by [Gradienta.io](https://gradienta.io/)
+- Icons: [Material Icons](https://simpleicons.org/) and [Simple Icons](https://simpleicons.org/)
+- Ukrainian Heart icon by [Linector](https://www.iconfinder.com/LINECTOR)
+
+## This website made with [Webpack React TS Boilerplate](https://github.com/valentine-samoylov/webpack-react-ts-boilerplate)
 
 React TS starter template with the most relevant tools and best development practices.
 
-## Features
+### Features
 
 - ⚛️ Supports React + TypeScript
 - 🔥 React Refresh (HMR) (**Dev mode**)
@@ -21,7 +32,7 @@ React TS starter template with the most relevant tools and best development prac
 - 🔬 Webpack Bundle Analyzer (**Prod mode**)
   - 📃 An HTML report file will be created in the **reports** folder.
 
-## Scripts
+### Scripts
 
 To install dependencies:
 

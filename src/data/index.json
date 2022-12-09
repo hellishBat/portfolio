@@ -1,0 +1,200 @@
+{
+  "nav": [
+    {
+      "linkId": "Hero",
+      "targetId": "heroSection",
+      "text": "Introduction"
+    },
+    {
+      "linkId": "About",
+      "targetId": "aboutSection",
+      "text": "About me"
+    },
+    {
+      "linkId": "Skills",
+      "targetId": "skillsSection",
+      "text": "Skills"
+    },
+    {
+      "linkId": "Works",
+      "targetId": "worksSection",
+      "text": "Recent works"
+    },
+    {
+      "linkId": "Download",
+      "targetId": "downloadSection",
+      "text": "Download CV"
+    },
+    {
+      "linkId": "Contacts",
+      "targetId": "contactsSection",
+      "text": "Get in touch"
+    }
+  ],
+  "hero": {
+    "firstName": "Valentine",
+    "lastName": "Samoylov",
+    "position": "Front-end developer",
+    "location": "Odesa, Ukraine",
+    "btn": { "label": "See my works" },
+    "pointer": "Scroll down"
+  },
+  "about": {
+    "heading": "About me",
+    "description": [
+      {
+        "text": "My name is Valentine, I am a front-end developer from Odesa, Ukraine. I like to learn new technologies and improve my skills to create awesome web applications and web pages."
+      },
+      {
+        "text": "I am looking for a career in an IT company to be part of its team, to work on new, interesting projects and to grow professionally together."
+      },
+      {
+        "text": "If I were to describe myself in one sentence, it would be a versatile outgoing guy, an admirer of good music and movies, and a technology enthusiast."
+      }
+    ]
+  },
+  "skills": {
+    "heading": "Skills",
+    "subheading": "Technologies and tools I use:",
+    "list": [
+      "HTML",
+      "CSS (BEM, RWD)",
+      "JavaScript (ES6)",
+      "TypeScript",
+      "React",
+      "Axios",
+      "SASS/SCSS",
+      "PostCSS",
+      "Styled Components",
+      "Polished",
+      "CSS Modules",
+      "TailwindCSS",
+      "Bootstrap",
+      "Bulma",
+      "Pug (Jade)",
+      "Node.js",
+      "NPM",
+      "Yarn",
+      "Webpack",
+      "Gulp",
+      "Git",
+      "Postman",
+      "Figma",
+      "Adobe Photoshop",
+      "Atlassian Jira"
+    ],
+    "slugs": [
+      "html5",
+      "css3",
+      "javascript",
+      "typescript",
+      "react",
+      "axios",
+      "sass",
+      "postcss",
+      "styledcomponents",
+      "cssmodules",
+      "tailwindcss",
+      "bootstrap",
+      "bulma",
+      "pug",
+      "dotenv",
+      "nodedotjs",
+      "npm",
+      "yarn",
+      "webpack",
+      "stylelint",
+      "eslint",
+      "prettier",
+      "babel",
+      "gulp",
+      "git",
+      "github",
+      "postman",
+      "greensock",
+      "figma",
+      "adobephotoshop",
+      "visualstudiocode",
+      "jira"
+    ]
+  },
+  "works": {
+    "heading": "Recent works",
+    "content": [
+      {
+        "title": "Mountain",
+        "text": "Snowboarding and ski school landing page with parallax effect and scroll-triggered animations.",
+        "hrefDemo": "https://mountain-school.vercel.app/",
+        "hrefRepo": "https://github.com/valentine-samoylov/mountain/"
+      },
+      {
+        "title": "Porten",
+        "text": "A pixel-perfect men's shop landing page with scrolling animations, made with Pug, SASS and JS.",
+        "hrefDemo": "https://porten-shop.vercel.app/",
+        "hrefRepo": "https://github.com/valentine-samoylov/porten-shop/"
+      },
+      {
+        "title": "Calculator App",
+        "text": "A simple calculator app, made using React and styled with CSS.",
+        "hrefDemo": "https://vs-calculator-app.vercel.app/",
+        "hrefRepo": "https://github.com/valentine-samoylov/calculator-app/"
+      },
+      {
+        "title": "Krypto",
+        "text": "A cryptocurrency page made using React, Axios and CoinGecko API, styled with TailwindCSS.",
+        "hrefDemo": "https://krypto-trading.vercel.app/",
+        "hrefRepo": "https://github.com/valentine-samoylov/krypto-trading"
+      },
+      {
+        "title": "WeatherInsight",
+        "text": "React weather app with location or city search, made using OpenWeather and Unsplash APIs, with light/dark mode.",
+        "hrefDemo": "https://weather-insight.vercel.app/",
+        "hrefRepo": "https://github.com/valentine-samoylov/weather-insight"
+      }
+    ],
+    "btn": { "demo": "Demo", "code": "Code" }
+  },
+  "download": {
+    "heading": "Download CV",
+    "btn": {
+      "label": "Download CV",
+      "href": "https://drive.google.com/uc?id=1HqqtWwp-QbntUKmBzv76KKXtAL9G7GKy&export=download"
+    }
+  },
+  "contacts": {
+    "heading": "Get in touch",
+    "subheading": "Feel free to contact me in any of the following ways:",
+    "links": [
+      {
+        "href": "tel:+380668355511",
+        "text": "+38 (066) 83 555 11"
+      },
+      {
+        "href": "mailto:valentine.samoylov@gmail.com",
+        "text": "valentine.samoylov@gmail.com"
+      }
+    ]
+  },
+  "social": {
+    "links": [
+      {
+        "href": "https://github.com/valentine-samoylov"
+      },
+      {
+        "href": "https://www.linkedin.com/in/valentine-samoylov/"
+      },
+      {
+        "href": "https://join.skype.com/invite/fjnLBWvnMhpk"
+      },
+      {
+        "href": "https://t.me/valentine_samoylov/"
+      },
+      {
+        "href": "https://www.instagram.com/valentine.samoylov/"
+      }
+    ]
+  },
+  "footer": {
+    "text": ["Coded with", "by Valentine Samoylov"]
+  }
+}

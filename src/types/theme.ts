@@ -4,21 +4,26 @@ export enum Mode {
   Dark = 'dark',
 }
 
-export interface ThemeProviderProps {
+export interface IThemeProviderProps {
   children: React.ReactNode
 }
 
-export interface ThemeContext {
+export interface IThemeContext {
   changeMode: (mode: Mode) => void
   mode: Mode
 }
 
-export interface Theme {
+export interface ITheme {
   colors: {
     primary: string
     secondary: string
+    secondaryGradient: string
     accent: string
-    text: string
+    accentHovered: string
+    accentGradient: string
+    overlay: string
+    textPrimary: string
+    textSecondary: string
   }
 }
 

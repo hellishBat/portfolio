@@ -14,6 +14,16 @@ declare module '*.svg' {
   export default src
 }
 
+declare module '*.woff' {
+  const src: string
+  export default src
+}
+
+declare module '*.woff2' {
+  const src: string
+  export default src
+}
+
 declare module '*.json' {
   const value: any
   export default value

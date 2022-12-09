@@ -3,7 +3,7 @@ import { createContext, useContext, useEffect, useState } from 'react'
 import { ThemeProvider } from 'styled-components'
 import { LightTheme, DarkTheme } from '@/themes'
 import GlobalStyles from '@/styles/global'
-import type { ThemeContext, ThemeProviderProps, Theme } from '@/types/theme'
+import type { IThemeContext, IThemeProviderProps, ITheme } from '@/types/theme'
 import { Mode } from '@/types/theme'
 
 const initialValue = {
@@ -11,10 +11,10 @@ const initialValue = {
   mode: Mode.Light,
 }
 
-const AppThemeContext = createContext<ThemeContext>(initialValue)
+const AppThemeContext = createContext<IThemeContext>(initialValue)
 
-export const AppThemeProvider = ({ children }: ThemeProviderProps) => {
-  const [theme, setTheme] = useState<Theme>(LightTheme)
+const AppThemeProvider = ({ children }: IThemeProviderProps) => {
+  const [theme, setTheme] = useState<ITheme>(LightTheme)
   const [mode, setMode] = useState<Mode>(Mode.Light)
 
   const changeMode = (mode: Mode | any) => {

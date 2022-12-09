@@ -1,10 +1,8 @@
 // Container
 import { FC } from 'react'
-import { StyledContainer } from './styles'
+import * as S from './styles'
 import type { ChildrenTypes } from '@/types'
 
-const Container: FC<ChildrenTypes> = ({ children }) => {
-  return <StyledContainer>{children}</StyledContainer>
+export const Container: FC<ChildrenTypes> = ({ children }) => {
+  return <S.Container>{children}</S.Container>
 }
-
-export default Container

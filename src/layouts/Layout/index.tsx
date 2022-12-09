@@ -1,13 +1,16 @@
 // Layout
 import { FC } from 'react'
-import Header from '@/layouts/Header'
-import Footer from '@/layouts/Footer'
+import MobileMenuProvider from '@/context/MobileMenuContext'
+import Header from '@/modules/Header'
+import Footer from '@/modules/Footer'
 import type { ChildrenTypes } from '@/types'
 
 const Layout: FC<ChildrenTypes> = ({ children }) => {
   return (
     <>
-      <Header />
+      <MobileMenuProvider>
+        <Header />
+      </MobileMenuProvider>
       <main>{children}</main>
       <Footer />
     </>

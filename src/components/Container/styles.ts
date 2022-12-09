@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { media } from '@/styles/media'
 import { mxWidth } from '@/constants'
 
-export const StyledContainer = styled.div`
+export const Container = styled.div`
   margin: 0 auto;
   padding: 0 1rem;
   width: 100%;

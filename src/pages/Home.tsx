@@ -1,42 +1,23 @@
 // Home
 import ContextProviders from '@/context/ContextProviders'
 import Layout from '@/layouts/Layout'
-import Container from '@/components/Container'
-import { inlineFlexAlignCenter } from '@/styles'
-import { LogoWebpack, LogoReact, LogoTS, LogoStyledComp, LogoPolished } from '@/assets'
+import Hero from '@/modules/Hero'
+import About from '@/modules/About'
+import Skills from '@/modules/Skills'
+import Works from '@/modules/Works'
+import Download from '@/modules/Download'
+import Contacts from '@/modules/Contacts'
 
 const Home = () => {
   return (
     <ContextProviders>
       <Layout>
-        <Container>
-          <div
-            css={`
-              text-align: center;
-            `}
-          >
-            <h1>
-              <span
-                css={`
-                  ${inlineFlexAlignCenter} gap: 0.3em;
-                `}
-              >
-                <LogoWebpack /> Webpack Boilerplate
-              </span>
-            </h1>
-            <h2>
-              <span
-                css={`
-                  ${inlineFlexAlignCenter} gap: 0.3em;
-                  flex-wrap: wrap;
-                `}
-              >
-                <LogoReact /> React <LogoTS /> TypeScript +<LogoStyledComp /> Styled Components +{' '}
-                <LogoPolished /> Polished
-              </span>
-            </h2>
-          </div>
-        </Container>
+        <Hero />
+        <About />
+        <Skills />
+        <Works />
+        <Download />
+        <Contacts />
       </Layout>
     </ContextProviders>
   )

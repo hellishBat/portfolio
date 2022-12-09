@@ -2,8 +2,8 @@
 
 // SEO
 module.exports = {
-  title: "Webpack React TS Boilerplate",
-  description: "Description",
-  previewImg: "assets/og-preview.png",
-  url: "url.com",
-};
+  title: 'Valentine Samoylov - Front-end developer',
+  description: 'Description',
+  previewImg: 'assets/og-preview.png',
+  url: 'url.com',
+}

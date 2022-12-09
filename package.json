@@ -1,6 +1,6 @@
 {
   "name": "webpack-react-ts-boilerplate",
-  "title": "Webpack React TS Boilerplate",
+  "title": "Valentine's portfolio website (based on Webpack React TS Boilerplate)",
   "version": "1.0.0",
   "main": "index.ts",
   "repository": "https://github.com/valentine-samoylov/webpack-react-ts-boilerplate.git",
@@ -41,6 +41,7 @@
     "@types/react": "^18.0.20",
     "@types/react-dom": "^18.0.6",
     "@types/styled-components": "^5.1.26",
+    "@types/uuid": "^8.3.4",
     "@types/webpack": "^5.28.0",
     "@types/webpack-dev-server": "^4.7.2",
     "@typescript-eslint/eslint-plugin": "^5.37.0",
@@ -81,11 +82,14 @@
     "webpack-merge": "^5.8.0"
   },
   "dependencies": {
+    "gsap": "^3.11.3",
     "polished": "^4.2.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-icon-cloud": "^4.1.4",
     "reseter.css": "^2.0.0",
-    "styled-components": "^5.3.5"
+    "styled-components": "^5.3.5",
+    "swiper": "^8.4.4"
   },
   "browserslist": {
     "production": [
