@@ -1,5 +1,5 @@
 // Skills
-import { useEffect } from 'react'
+import { useLayoutEffect } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { Container, Typography } from '@/components'
@@ -16,7 +16,7 @@ const Skills = () => {
 
   gsap.registerPlugin(ScrollTrigger)
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     gsap.to('#skillsSection', {
       scrollTrigger: {
         trigger: '#skillsSection',
@@ -31,22 +31,33 @@ const Skills = () => {
       .timeline({
         scrollTrigger: {
           trigger: '#skillsSection',
-          start: 'top bottom',
+          start: 'top 70%',
           end: 'top 33%',
-          scrub: 1,
         },
       })
       .from('#skillsHeading', {
         yPercent: 100,
         opacity: 0,
+        stagger: 0.15,
+        duration: 1,
       })
       .from('#skillsCloud', {
         scale: 0,
         opacity: 0,
+        stagger: 0.15,
+        duration: 1,
       })
-      .from('#skillsCol', {
+      .from('#skillsCol h4', {
         yPercent: 33,
         opacity: 0,
+        stagger: 0.15,
+        duration: 0.75,
+      })
+      .from('#skillsCol ul li', {
+        scale: 0,
+        opacity: 0,
+        stagger: 0.15,
+        duration: 0.25,
       })
 
     ScrollTrigger.refresh()

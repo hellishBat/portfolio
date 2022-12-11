@@ -1,5 +1,5 @@
 // About
-import { useEffect } from 'react'
+import { useLayoutEffect } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useNav } from '@/hooks/useNav'
@@ -16,7 +16,7 @@ const About = () => {
 
   gsap.registerPlugin(ScrollTrigger)
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     gsap.to('#aboutSection', {
       scrollTrigger: {
         trigger: '#aboutSection',
@@ -33,20 +33,25 @@ const About = () => {
           trigger: '#aboutSection',
           start: 'top 70%',
           end: 'top 33%',
-          scrub: 1,
         },
       })
       .from('#aboutHeading', {
         yPercent: 100,
         opacity: 0,
+        stagger: 0.15,
+        duration: 1,
       })
       .from('#aboutImg', {
         scale: 0,
         opacity: 0,
+        stagger: 0.15,
+        duration: 1,
       })
-      .from('#aboutCol', {
+      .from('#aboutCol p', {
         yPercent: 33,
         opacity: 0,
+        stagger: 0.15,
+        duration: 1.25,
       })
 
     ScrollTrigger.refresh()

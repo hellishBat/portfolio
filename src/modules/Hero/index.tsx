@@ -1,5 +1,5 @@
 // Hero
-import { useEffect } from 'react'
+import { useLayoutEffect } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useThemeContext } from '@/context/ThemeContext'
@@ -25,7 +25,7 @@ const Hero = () => {
 
   gsap.registerPlugin(ScrollTrigger)
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     gsap.to('#heroSection', {
       scrollTrigger: {
         trigger: '#heroSection',
@@ -46,7 +46,7 @@ const Hero = () => {
         yPercent: 100,
         opacity: 0,
         stagger: 0.15,
-        duration: 1,
+        duration: 1.25,
       })
       .from('#heroSubtitle', {
         yPercent: 100,
@@ -54,8 +54,14 @@ const Hero = () => {
         stagger: 0.15,
         duration: 1,
       })
-      .from('#heroSocial', {
-        xPercent: 100,
+      .from('#heroSocial ul li', {
+        scale: 0,
+        opacity: 0,
+        stagger: 0.15,
+        duration: 0.5,
+      })
+      .from('#heroSocial span', {
+        yPercent: 33,
         opacity: 0,
         stagger: 0.15,
         duration: 0.5,

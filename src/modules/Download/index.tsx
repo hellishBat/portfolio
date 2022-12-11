@@ -1,5 +1,5 @@
 // Download
-import { useEffect } from 'react'
+import { useLayoutEffect } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useNav } from '@/hooks/useNav'
@@ -15,13 +15,12 @@ const Download = () => {
 
   gsap.registerPlugin(ScrollTrigger)
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     gsap.from('#downloadHeading', {
       scrollTrigger: {
         trigger: '#downloadHeading',
         start: 'top bottom',
         end: 'top 40%',
-        scrub: true,
       },
       yPercent: 100,
       opacity: 0,

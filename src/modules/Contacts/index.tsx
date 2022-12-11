@@ -1,5 +1,5 @@
 // Contacts
-import { useEffect } from 'react'
+import { useLayoutEffect } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useNav } from '@/hooks/useNav'
@@ -15,31 +15,38 @@ const Contacts = () => {
 
   gsap.registerPlugin(ScrollTrigger)
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     gsap
       .timeline({
         scrollTrigger: {
           trigger: '#contactsSection',
           start: 'top bottom',
           end: 'top 50%',
-          scrub: 1,
         },
       })
       .from('#contactsSection h3', {
         yPercent: 100,
         opacity: 0,
+        stagger: 0.15,
+        duration: 1.25,
       })
       .from('#contactsSection h4', {
         yPercent: 100,
         opacity: 0,
+        stagger: 0.15,
+        duration: 0.75,
       })
-      .from('#addressList', {
+      .from('#addressList a', {
         yPercent: 50,
         opacity: 0,
+        stagger: 0.15,
+        duration: 0.5,
       })
       .from('#addressSocial li', {
         scale: 0,
         opacity: 0,
+        stagger: 0.15,
+        duration: 0.5,
       })
 
     ScrollTrigger.refresh()

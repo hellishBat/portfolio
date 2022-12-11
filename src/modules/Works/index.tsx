@@ -1,5 +1,5 @@
 // Works
-import { useEffect } from 'react'
+import { useLayoutEffect } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { Swiper, SwiperSlide } from 'swiper/react'
@@ -77,7 +77,7 @@ const Works = () => {
 
   gsap.registerPlugin(ScrollTrigger)
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     gsap.to('#worksSection', {
       scrollTrigger: {
         trigger: '#worksSection',
@@ -92,27 +92,22 @@ const Works = () => {
       .timeline({
         scrollTrigger: {
           trigger: '#worksSection',
-          start: 'top bottom',
+          start: 'top 70%',
           end: 'top 33%',
-          scrub: 1,
         },
       })
       .from('#worksHeading', {
         yPercent: 100,
         opacity: 0,
-      })
-
-    const worksSlides = gsap.utils.toArray('.swiper-slide article')
-    worksSlides.forEach((worksSlide: any) => {
-      return gsap.from(worksSlide, {
-        xPercent: 50,
         stagger: 0.15,
         duration: 1,
-        scrollTrigger: {
-          trigger: worksSlide,
-        },
       })
-    })
+      .from('.swiper-slide article', {
+        xPercent: 50,
+        opacity: 0,
+        stagger: 0.15,
+        duration: 1.25,
+      })
 
     ScrollTrigger.refresh()
   }, [])
