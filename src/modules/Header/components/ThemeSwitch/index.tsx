@@ -6,7 +6,7 @@ import { Mode, ThemeSwitchTypes } from '@/types/theme'
 
 export const ThemeSwitch: FC<ThemeSwitchTypes> = ({ clickHandler, mode }) => {
   return (
-    <S.Button onClick={clickHandler}>
+    <S.Button onClick={clickHandler} title="Switch Theme">
       {mode === Mode.Light ? <IconLightMode /> : <IconDarkMode />}
     </S.Button>
   )
