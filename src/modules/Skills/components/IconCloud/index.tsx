@@ -1,8 +1,8 @@
 import { useEffect, useState, useMemo, memo } from 'react'
+import { useTheme } from 'styled-components'
 import { fetchSimpleIcons, Cloud, renderSimpleIcon } from 'react-icon-cloud'
 import { useThemeContext } from '@/context/ThemeContext'
 import { Mode } from '@/types/theme'
-import { useTheme } from 'styled-components'
 
 type IconData = Awaited<ReturnType<typeof fetchSimpleIcons>>
 
@@ -24,7 +24,7 @@ export const IconCloud = memo(function IconCloud(props: any) {
       depth: 1,
       imageScale: 2,
       initial: [0.1, -0.1],
-      outlineColour: '#0000',
+      outlineColour: 'transparent',
       reverse: true,
       tooltip: 'native',
       tooltipDelay: 0,
@@ -35,7 +35,7 @@ export const IconCloud = memo(function IconCloud(props: any) {
   const renderCustomIcon = (icon: any, mode?: Mode) => {
     return renderSimpleIcon({
       icon,
-      minContrastRatio: mode === Mode.Light ? 1 : 1.2,
+      minContrastRatio: mode === Mode.Light ? 1 : 2,
       bgHex: theme.colors.primary,
       fallbackHex: theme.colors.textPrimary,
       size: 42,
