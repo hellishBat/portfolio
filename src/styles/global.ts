@@ -102,7 +102,6 @@ body {
   line-height: 1.5;
   font-family: 'Nunito Sans';
   color: ${({ theme }) => theme.colors.textPrimary};
-  counter-reset: section;
 
   &.isLocked {
       overflow: hidden;
@@ -118,7 +117,6 @@ body {
 #root {
   display: flex;
   flex-direction: column;
-  align-items: stretch;
   min-height: 100%;
   overflow: hidden;
 }
