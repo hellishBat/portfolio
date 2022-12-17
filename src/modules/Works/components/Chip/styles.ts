@@ -35,6 +35,10 @@ const COLOR = {
     background-color: var(--color-pink-200);
     color: var(--color-pink-900);
   `,
+  rose: css`
+    background-color: var(--color-rose-200);
+    color: var(--color-rose-900);
+  `,
 }
 
 export const Chip = styled.span<ChipProps>`

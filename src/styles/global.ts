@@ -29,8 +29,10 @@ const GlobalStyles = createGlobalStyle`
   --color-royal-900: #103489;
   --color-indigo-200: #dcd2f9;
   --color-indigo-900: #311188;
-  --color-pink-200: #fecdd3;
+  --color-pink-200: #fbcfe8;
   --color-pink-900: #831843;
+  --color-rose-200: #fecdd3;
+  --color-rose-900: #881337;
 
   // Shadows
   --shadow-color: rgb(0 0 0 / 0.1);

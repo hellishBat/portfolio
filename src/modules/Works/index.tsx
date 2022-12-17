@@ -22,6 +22,7 @@ import {
   IconJS,
   IconTS,
   IconReact,
+  IconReactQuery,
   IconAxios,
   IconPug,
   IconCSS,
@@ -31,13 +32,14 @@ import {
 
 const worksData = data.works
 
-const techIcons = [
+const stackIcons = [
   { icon: <IconPug />, title: 'Pug', color: 'brown' },
   { icon: <IconCSS />, title: 'CSS', color: 'royal' },
   { icon: <IconSASS />, title: 'SASS/SCSS', color: 'pink' },
   { icon: <IconJS />, title: 'JS', color: 'yellow' },
   { icon: <IconTS />, title: 'TS', color: 'blue' },
   { icon: <IconReact />, title: 'React', color: 'sky' },
+  { icon: <IconReactQuery />, title: 'React Query', color: 'rose' },
   { icon: <IconAxios />, title: 'Axios', color: 'indigo' },
   { icon: <IconTailwind />, title: 'Tailwind CSS', color: 'cyan' },
 ]
@@ -45,23 +47,23 @@ const techIcons = [
 const worksAssets = [
   {
     imgSrc: previewMountain,
-    stack: [techIcons[0], techIcons[2], techIcons[3]],
+    stack: [stackIcons[0], stackIcons[2], stackIcons[3]],
   },
   {
     imgSrc: previewPorten,
-    stack: [techIcons[0], techIcons[2], techIcons[3]],
+    stack: [stackIcons[0], stackIcons[2], stackIcons[3]],
   },
   {
     imgSrc: previewCalc,
-    stack: [techIcons[5], techIcons[1]],
+    stack: [stackIcons[5], stackIcons[1]],
   },
   {
     imgSrc: previewKrypto,
-    stack: [techIcons[5], techIcons[6], techIcons[7]],
+    stack: [stackIcons[5], stackIcons[7], stackIcons[8]],
   },
   {
     imgSrc: previewWeatherInsight,
-    stack: [techIcons[5], techIcons[4], techIcons[6], techIcons[7]],
+    stack: [stackIcons[5], stackIcons[4], stackIcons[7], stackIcons[8]],
   },
 ]
 

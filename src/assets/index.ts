@@ -18,6 +18,7 @@ import IconDownload from '@/assets/svg/download.svg'
 import IconJS from '@/assets/svg/js.svg'
 import IconTS from '@/assets/svg/ts.svg'
 import IconReact from '@/assets/svg/react.svg'
+import IconReactQuery from '@/assets/svg/react-query.svg'
 import IconAxios from '@/assets/svg/axios.svg'
 import IconPug from '@/assets/svg/pug.svg'
 import IconCSS from '@/assets/svg/css3.svg'
@@ -52,6 +53,7 @@ export {
   IconJS,
   IconTS,
   IconReact,
+  IconReactQuery,
   IconAxios,
   IconPug,
   IconCSS,
