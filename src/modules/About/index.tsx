@@ -7,7 +7,7 @@ import { Container, Typography } from '@/components'
 import * as S from './styles'
 import * as SC from '@/styles/common'
 import data from '@/data/index.json'
-import { ownerPhoto } from '@/assets'
+import { authorPhoto } from '@/assets'
 
 const aboutData = data.about
 
@@ -65,7 +65,7 @@ const About = () => {
         </Typography>
         <S.Content>
           <S.Img id="aboutImg">
-            <img src={ownerPhoto} alt="Valentine Samoylov" loading="lazy" />
+            <img src={authorPhoto} alt="Valentine Samoylov" loading="lazy" />
           </S.Img>
           <S.Col id="aboutCol">
             {aboutData.description.map((paragraph, idx) => (
