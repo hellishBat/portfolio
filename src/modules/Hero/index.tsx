@@ -43,7 +43,7 @@ const Hero = () => {
         },
       })
       .from('#heroTitle', {
-        yPercent: 66,
+        yPercent: 100,
         opacity: 0,
         stagger: 0.15,
         duration: 1.25,
