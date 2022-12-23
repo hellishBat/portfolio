@@ -4,6 +4,7 @@ import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useNav } from '@/hooks/useNav'
 import { Container, Typography } from '@/components'
+import { Person } from './components'
 import * as S from './styles'
 import * as SC from '@/styles/common'
 import data from '@/data/index.json'
@@ -41,11 +42,17 @@ const About = () => {
         stagger: 0.15,
         duration: 1,
       })
-      .from('#aboutImg', {
+      .from('#aboutCircle', {
         scale: 0,
         opacity: 0,
         stagger: 0.15,
-        duration: 1,
+        duration: 0.75,
+      })
+      .from('#aboutImg', {
+        yPercent: 33,
+        opacity: 0,
+        stagger: 0.15,
+        duration: 0.75,
       })
       .from('#aboutCol p', {
         yPercent: 33,
@@ -64,9 +71,7 @@ const About = () => {
           {aboutData.heading}
         </Typography>
         <S.Content>
-          <S.Img id="aboutImg">
-            <img src={authorPhoto} alt="Valentine Samoylov" loading="lazy" />
-          </S.Img>
+          <Person image={authorPhoto} />
           <S.Col id="aboutCol">
             {aboutData.description.map((paragraph, idx) => (
               <Typography variant="p" key={idx}>

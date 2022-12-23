@@ -43,10 +43,6 @@ type SectionProps = ChildrenTypes & {
   imageUrl?: string
 }
 
-type ChipProps = ChildrenTypes & {
-  color?: 'yellow' | 'brown' | 'cyan' | 'blue' | 'sky' | 'royal' | 'indigo' | 'pink'
-}
-
 type SocialProps = ChildrenTypes & {
   data?:
     | {
@@ -55,6 +51,10 @@ type SocialProps = ChildrenTypes & {
     | undefined
   vertical?: boolean | undefined
   size?: 'md' | 'lg'
+}
+
+type PersonProps = {
+  image?: string
 }
 
 type WorksCardProps = {
@@ -72,6 +72,10 @@ type WorksCardProps = {
   }
 }
 
+type ChipProps = ChildrenTypes & {
+  color?: 'yellow' | 'brown' | 'cyan' | 'blue' | 'sky' | 'royal' | 'indigo' | 'pink'
+}
+
 export {
   ChildrenTypes,
   ClickHandlerType,
@@ -80,7 +84,8 @@ export {
   LinkProps,
   TypographyProps,
   SectionProps,
-  ChipProps,
   SocialProps,
+  PersonProps,
   WorksCardProps,
+  ChipProps,
 }

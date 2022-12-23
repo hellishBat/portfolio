@@ -23,34 +23,10 @@ const Content = styled.div`
   }
 `
 
-const Img = styled.figure`
-  flex-shrink: 0;
-  width: 10rem;
-  height: 10rem;
-  border-radius: 50%;
-  background-image: ${({ theme }) => theme.colors.accentGradient};
-  overflow: hidden;
-
-  > img {
-    max-width: 100%;
-    height: auto;
-  }
-
-  ${media.md} {
-    width: 12rem;
-    height: 12rem;
-  }
-
-  ${media.xxl} {
-    width: 16rem;
-    height: 16rem;
-  }
-`
-
 const Col = styled.div`
   > p:last-of-type {
     margin-bottom: 1.5rem;
   }
 `
 
-export { Content, Img, Col }
+export { Content, Col }
