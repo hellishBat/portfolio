@@ -43,13 +43,13 @@ const Hero = () => {
         },
       })
       .from('#heroTitle', {
-        yPercent: 100,
+        yPercent: 50,
         opacity: 0,
         stagger: 0.15,
         duration: 1.25,
       })
       .from('#heroSubtitle', {
-        yPercent: 100,
+        yPercent: 50,
         opacity: 0,
         stagger: 0.15,
         duration: 1,
