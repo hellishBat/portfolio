@@ -28,8 +28,8 @@ const Img = styled.figure`
   width: 10rem;
   height: 10rem;
   border-radius: 50%;
+  background-image: ${({ theme }) => theme.colors.accentGradient};
   overflow: hidden;
-  position: relative;
 
   > img {
     max-width: 100%;

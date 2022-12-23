@@ -1,8 +1,8 @@
 // Assets
 // Images (Backgrounds, then content img)
 import heroBgLight from '@/assets/img/bg/hero-bg-light.png?as=webp'
-import heroBgDark from '@/assets/img/bg/hero-bg.png?as=webp'
-import ownerPhoto from '@/assets/img/content/owner-photo.jpg?as=webp'
+import heroBgDark from '@/assets/img/bg/hero-bg-dark.png?as=webp'
+import authorPhoto from '@/assets/img/content/author-photo.png?as=webp'
 import previewMountain from '@/assets/img/content/preview-mountain.jpg?as=webp'
 import previewPorten from '@/assets/img/content/preview-porten.jpg?as=webp'
 import previewCalc from '@/assets/img/content/preview-calc.jpg?as=webp'
@@ -39,7 +39,7 @@ import IconHeart from '@/assets/svg/heart.svg'
 export {
   heroBgLight,
   heroBgDark,
-  ownerPhoto,
+  authorPhoto,
   previewMountain,
   previewPorten,
   previewCalc,
