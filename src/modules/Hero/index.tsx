@@ -43,13 +43,13 @@ const Hero = () => {
         },
       })
       .from('#heroTitle', {
-        yPercent: 50,
+        yPercent: 66,
         opacity: 0,
         stagger: 0.15,
         duration: 1.25,
       })
       .from('#heroSubtitle', {
-        yPercent: 50,
+        yPercent: 33,
         opacity: 0,
         stagger: 0.15,
         duration: 1,
@@ -61,7 +61,7 @@ const Hero = () => {
         duration: 0.5,
       })
       .from('#heroSocial span', {
-        yPercent: 33,
+        yPercent: 15,
         opacity: 0,
         stagger: 0.15,
         duration: 0.5,
