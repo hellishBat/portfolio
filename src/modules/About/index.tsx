@@ -41,24 +41,28 @@ const About = () => {
         opacity: 0,
         stagger: 0.15,
         duration: 1,
+        ease: 'sine',
       })
       .from('#aboutCircle', {
         scale: 0,
         opacity: 0,
         stagger: 0.15,
-        duration: 0.75,
+        duration: 1,
+        ease: 'back',
       })
       .from('#aboutImg', {
         yPercent: 33,
         opacity: 0,
         stagger: 0.15,
-        duration: 0.75,
+        duration: 1,
+        ease: 'back',
       })
       .from('#aboutCol p', {
         yPercent: 33,
         opacity: 0,
         stagger: 0.15,
         duration: 1.25,
+        ease: 'sine',
       })
 
     ScrollTrigger.refresh()

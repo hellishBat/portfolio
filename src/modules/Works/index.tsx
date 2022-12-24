@@ -103,12 +103,14 @@ const Works = () => {
         opacity: 0,
         stagger: 0.15,
         duration: 1,
+        ease: 'sine',
       })
       .from('.swiper-slide article', {
         xPercent: 50,
         opacity: 0,
         stagger: 0.15,
         duration: 1.25,
+        ease: 'sine',
       })
 
     ScrollTrigger.refresh()

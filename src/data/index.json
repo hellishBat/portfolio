@@ -92,6 +92,7 @@
       "javascript",
       "typescript",
       "react",
+      "reactquery",
       "axios",
       "sass",
       "postcss",

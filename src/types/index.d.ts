@@ -24,6 +24,7 @@ type ButtonProps = ChildrenTypes & {
   download?: boolean
   target?: '_blank'
   rel?: string
+  id?: string
 }
 
 type LinkProps = ChildrenTypes & {

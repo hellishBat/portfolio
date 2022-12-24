@@ -40,24 +40,28 @@ const Skills = () => {
         opacity: 0,
         stagger: 0.15,
         duration: 1,
+        ease: 'sine',
       })
       .from('#skillsCloud', {
         scale: 0,
         opacity: 0,
         stagger: 0.15,
         duration: 1,
+        ease: 'back',
       })
       .from('#skillsCol h4', {
         yPercent: 33,
         opacity: 0,
         stagger: 0.15,
         duration: 0.75,
+        ease: 'sine',
       })
       .from('#skillsCol ul li', {
         scale: 0,
         opacity: 0,
         stagger: 0.15,
         duration: 0.25,
+        ease: 'back',
       })
 
     ScrollTrigger.refresh()

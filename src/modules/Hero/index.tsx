@@ -47,24 +47,35 @@ const Hero = () => {
         opacity: 0,
         stagger: 0.15,
         duration: 1.25,
+        ease: 'sine',
       })
       .from('#heroSubtitle', {
         yPercent: 33,
         opacity: 0,
         stagger: 0.15,
         duration: 1,
+        ease: 'sine',
+      })
+      .from('#heroButton', {
+        scale: 0,
+        opacity: 0,
+        stagger: 0.15,
+        duration: 0.75,
+        ease: 'back',
       })
       .from('#heroSocial ul li', {
         scale: 0,
         opacity: 0,
         stagger: 0.15,
         duration: 0.5,
+        ease: 'back',
       })
       .from('#heroSocial span', {
         yPercent: 15,
         opacity: 0,
         stagger: 0.15,
         duration: 0.5,
+        ease: 'sine',
       })
 
     ScrollTrigger.refresh()
@@ -89,7 +100,7 @@ const Hero = () => {
               <br />
               <span>{heroData.location}</span>
             </Typography>
-            <Button size="lg" variant="primary" onClick={handleClick}>
+            <Button id="heroButton" size="lg" variant="primary" onClick={handleClick}>
               <span>{heroData.btn.label}</span>
               <IconArrowRight />
             </Button>

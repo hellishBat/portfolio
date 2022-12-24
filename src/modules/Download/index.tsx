@@ -16,15 +16,28 @@ const Download = () => {
   gsap.registerPlugin(ScrollTrigger)
 
   useLayoutEffect(() => {
-    gsap.from('#downloadHeading', {
-      scrollTrigger: {
-        trigger: '#downloadHeading',
-        start: 'top bottom',
-        end: 'top 40%',
-      },
-      yPercent: 100,
-      opacity: 0,
-    })
+    gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: '#downloadSection',
+          start: 'top bottom',
+          end: 'top 40%',
+        },
+      })
+      .from('#downloadHeading', {
+        yPercent: 100,
+        opacity: 0,
+        stagger: 0.15,
+        duration: 1,
+        ease: 'sine',
+      })
+      .from('#downloadButton', {
+        scale: 0,
+        opacity: 0,
+        stagger: 0.15,
+        duration: 0.75,
+        ease: 'back',
+      })
 
     ScrollTrigger.refresh()
   }, [])
@@ -41,7 +54,14 @@ const Download = () => {
             justify-content: center;
           `}
         >
-          <Button size="md" variant="primary" as="a" href={downloadData.btn.href} download>
+          <Button
+            id="downloadButton"
+            size="md"
+            variant="primary"
+            as="a"
+            href={downloadData.btn.href}
+            download
+          >
             <IconDownload />
             {downloadData.btn.label}
           </Button>

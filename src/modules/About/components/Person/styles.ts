@@ -20,7 +20,7 @@ const PersonContainer = styled.div`
   display: grid;
   align-items: end;
   border-radius: 0 0 100vw 100vw;
-  aspect-ratio: 1/1.15;
+  aspect-ratio: 1/1.17;
   overflow: hidden;
 `
 
