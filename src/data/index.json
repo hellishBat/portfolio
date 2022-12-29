@@ -201,5 +201,8 @@
   },
   "footer": {
     "text": ["Coded with", "by Valentine Samoylov"]
+  },
+  "loader": {
+    "text": "Loading..."
   }
 }
