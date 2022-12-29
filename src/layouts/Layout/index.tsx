@@ -1,18 +1,33 @@
 // Layout
-import { FC } from 'react'
+import { FC, useEffect, useState } from 'react'
 import MobileMenuProvider from '@/context/MobileMenuContext'
+import Loader from '@/modules/Loader'
 import Header from '@/modules/Header'
 import Footer from '@/modules/Footer'
 import type { ChildrenTypes } from '@/types'
 
 const Layout: FC<ChildrenTypes> = ({ children }) => {
+  const [loading, setLoading] = useState(false)
+  useEffect(() => {
+    setLoading(true)
+    setTimeout(() => {
+      setLoading(false)
+    }, 2000)
+  }, [])
+
   return (
     <>
-      <MobileMenuProvider>
-        <Header />
-      </MobileMenuProvider>
-      <main>{children}</main>
-      <Footer />
+      {loading ? (
+        <Loader />
+      ) : (
+        <>
+          <MobileMenuProvider>
+            <Header />
+          </MobileMenuProvider>
+          <main>{children}</main>
+          <Footer />
+        </>
+      )}
     </>
   )
 }
