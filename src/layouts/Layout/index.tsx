@@ -7,9 +7,8 @@ import Footer from '@/modules/Footer'
 import type { ChildrenTypes } from '@/types'
 
 const Layout: FC<ChildrenTypes> = ({ children }) => {
-  const [loading, setLoading] = useState(false)
+  const [loading, setLoading] = useState(true)
   useEffect(() => {
-    setLoading(true)
     setTimeout(() => {
       setLoading(false)
     }, 2000)
