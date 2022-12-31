@@ -4,9 +4,9 @@ This is my portfolio website where you can find my works and contact information
 
 ## Credits (In order of appearance)
 
-- Libraries: [React Icon Cloud](https://www.npmjs.com/package/react-icon-cloud), [Swiper](https://www.npmjs.com/package/swiper)
+- Libraries: [GSAP](https://www.npmjs.com/package/gsap), [React Icon Cloud](https://www.npmjs.com/package/react-icon-cloud), [Swiper](https://www.npmjs.com/package/swiper)
 - Main screen backgrounds images by [Gradienta.io](https://gradienta.io/)
-- Icons: [Material Icons](https://simpleicons.org/) and [Simple Icons](https://simpleicons.org/)
+- Icons: [Material Icons](https://fonts.google.com/icons) and [Simple Icons](https://simpleicons.org/)
 - Ukrainian Heart icon by [Linector](https://www.iconfinder.com/LINECTOR)
 
 ## This website made with [Webpack React TS Boilerplate](https://github.com/valentine-samoylov/webpack-react-ts-boilerplate)
