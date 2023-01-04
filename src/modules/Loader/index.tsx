@@ -1,6 +1,5 @@
 // Loader
 import * as S from './styles'
-import { Typography } from '@/components'
 import data from '@/data/index.json'
 import { LogoVS } from '@/assets'
 
@@ -10,7 +9,7 @@ const Loader = () => {
       <S.LogoWrapper>
         <LogoVS />
       </S.LogoWrapper>
-      <Typography variant="p">{data.loader.text}</Typography>
+      <S.LogoLabel>{data.loader.text}</S.LogoLabel>
     </S.Container>
   )
 }

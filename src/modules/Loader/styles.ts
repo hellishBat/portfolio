@@ -39,4 +39,12 @@ const LogoWrapper = styled.figure`
   animation: ${elasticShake} 0.8s ease-in-out infinite both;
 `
 
-export { Container, LogoWrapper }
+const LogoLabel = styled.span`
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.094em;
+  color: ${({ theme }) => theme.colors.textSecondary};
+  text-transform: uppercase;
+`
+
+export { Container, LogoWrapper, LogoLabel }
