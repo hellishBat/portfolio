@@ -63,7 +63,7 @@ const worksAssets = [
   },
   {
     imgSrc: previewWeatherInsight,
-    stack: [stackIcons[5], stackIcons[4], stackIcons[7], stackIcons[8]],
+    stack: [stackIcons[5], stackIcons[4], stackIcons[6], stackIcons[7], stackIcons[8]],
   },
 ]
 

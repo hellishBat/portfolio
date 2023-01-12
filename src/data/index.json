@@ -152,8 +152,8 @@
       {
         "title": "WeatherInsight",
         "text": "React weather app with location or city search, made using OpenWeather and Unsplash APIs, with light/dark mode.",
-        "hrefDemo": "https://weather-insight.vercel.app/",
-        "hrefRepo": "https://github.com/valentine-samoylov/weather-insight"
+        "hrefDemo": "https://weatherinsight.vercel.app/",
+        "hrefRepo": "https://github.com/valentine-samoylov/weatherinsight"
       }
     ],
     "btn": { "demo": "Demo", "code": "Code" }
