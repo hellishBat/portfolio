@@ -151,7 +151,7 @@
       },
       {
         "title": "WeatherInsight",
-        "text": "React weather app with location or city search, made using OpenWeather and Unsplash APIs, with light/dark mode.",
+        "text": "React weather app with location or city search, made using OpenWeather, Unsplash, GeoDB Cities and IPWHOIS.io APIs.",
         "hrefDemo": "https://weatherinsight.vercel.app/",
         "hrefRepo": "https://github.com/valentine-samoylov/weatherinsight"
       }
@@ -162,7 +162,7 @@
     "heading": "Download CV",
     "btn": {
       "label": "Download CV",
-      "href": "https://drive.google.com/uc?id=1HqqtWwp-QbntUKmBzv76KKXtAL9G7GKy&export=download"
+      "href": "https://drive.google.com/uc?id=1ptP-QZwwXgkjZFhKoc7SjCGOSSsKUw97&export=download"
     }
   },
   "contacts": {
