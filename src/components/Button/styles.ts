@@ -35,10 +35,6 @@ const VARIANT = {
         box-shadow: var(--shadow-lg);
       }
 
-      &:focus {
-        box-shadow: 0 0 0 0.1875rem ${({ theme }) => rgba(theme.colors.accent, 0.5)};
-      }
-
       &:active {
         box-shadow: inset 0 0.1875rem 0.25rem rgba(0, 0, 0, 0.5);
       }
@@ -57,10 +53,6 @@ const VARIANT = {
         background-color: ${({ theme }) => rgba(theme.colors.accentHovered, 0.1)};
       }
 
-      &:focus {
-        box-shadow: 0 0 0 0.1875rem ${({ theme }) => rgba(theme.colors.accent, 0.5)};
-      }
-
       &:active {
         color: ${({ theme }) => darken('0.075', theme.colors.accentHovered)};
       }
@@ -77,10 +69,6 @@ const VARIANT = {
         color: ${({ theme }) => theme.colors.accentHovered};
       }
 
-      &:focus {
-        box-shadow: 0 0 0 0.1875rem ${({ theme }) => rgba(theme.colors.accent, 0.5)};
-      }
-
       &:active {
         color: ${({ theme }) => darken('0.075', theme.colors.accentHovered)};
       }
@@ -95,10 +83,6 @@ const VARIANT = {
     ${media.lg} {
       &:hover {
         color: ${({ theme }) => theme.colors.accentHovered};
-      }
-
-      &:focus {
-        box-shadow: 0 0 0 0.1875rem ${({ theme }) => rgba(theme.colors.accent, 0.5)};
       }
 
       &:active {

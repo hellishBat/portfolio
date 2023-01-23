@@ -1,5 +1,6 @@
 // Global Styles
 import { createGlobalStyle } from 'styled-components'
+import { rgba } from 'polished'
 import { mxWidth } from '@/constants'
 import { media } from '@/styles/media'
 import './fonts.css'
@@ -144,6 +145,12 @@ button,
 input {
   outline: transparent;
   border: none;
+
+  ${media.lg} {
+    &:focus-visible {
+      box-shadow: 0 0 0 0.1875rem ${({ theme }) => rgba(theme.colors.accent, 0.5)};
+    }
+  }
 }
 
 a {
