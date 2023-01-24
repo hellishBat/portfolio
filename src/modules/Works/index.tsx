@@ -136,6 +136,7 @@ const Works = () => {
           freeMode={true}
           keyboard={{
             enabled: true,
+            onlyInViewport: false,
           }}
           mousewheel={{
             forceToAxis: true,
