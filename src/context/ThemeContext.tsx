@@ -6,22 +6,24 @@ import GlobalStyles from '@/styles/global'
 import type { IThemeContext, IThemeProviderProps, ITheme } from '@/types/theme'
 import { Mode } from '@/types/theme'
 
-const initialValue = {
-  changeMode: () => {},
-  mode: Mode.Light,
+const getInitialMode = (): Mode => {
+  const isDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+  return isDark ? Mode.Dark : Mode.Light
 }
 
-const AppThemeContext = createContext<IThemeContext>(initialValue)
+const AppThemeContext = createContext<IThemeContext>({
+  changeMode: () => {},
+  mode: Mode.Light,
+})
 
 const AppThemeProvider = ({ children }: IThemeProviderProps) => {
   const [theme, setTheme] = useState<ITheme>(LightTheme)
-  const [mode, setMode] = useState<Mode>(Mode.Light)
+  const [mode, setMode] = useState<Mode>(getInitialMode())
 
   const changeMode = (mode: Mode | any) => {
     setTheme(mode === Mode.Light ? LightTheme : DarkTheme)
     setMode(mode)
     window.localStorage.setItem('theme', mode)
-    console.log(window.localStorage.getItem('theme'))
   }
 
   useEffect(() => {

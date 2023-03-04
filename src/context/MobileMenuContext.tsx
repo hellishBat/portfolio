@@ -1,15 +1,23 @@
 // MobileMenuContext
-import { createContext, useContext, useState } from 'react'
+import { createContext, useContext, useState, useEffect } from 'react'
 import type { IMobileMenuContext, IMobileMenuProviderProps } from '@/types/mobileMenu'
 
-const MobileMenuContext = createContext({} as IMobileMenuContext)
+const MobileMenuContext = createContext<IMobileMenuContext>({} as IMobileMenuContext)
 
 const MobileMenuProvider = ({ children }: IMobileMenuProviderProps) => {
   const [isOpen, setIsOpen] = useState(false)
 
+  useEffect(() => {
+    const body = document.body
+    if (isOpen) {
+      body.classList.add('isLocked')
+    } else {
+      body.classList.remove('isLocked')
+    }
+  }, [isOpen])
+
   const toggleMenu = () => {
     setIsOpen(!isOpen)
-    document.body.classList.toggle('isLocked')
   }
 
   const openMenu = () => setIsOpen(true)

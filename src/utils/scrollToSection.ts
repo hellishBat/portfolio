@@ -1,6 +1,9 @@
 // scrollToId
 export const scrollToSection = (scrollTo: string | null) => {
   if (scrollTo != null) {
-    document.getElementById(scrollTo)?.scrollIntoView({ behavior: 'smooth' })
+    const element = document.getElementById(scrollTo)
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' })
+    }
   }
 }
