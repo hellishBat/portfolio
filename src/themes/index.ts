@@ -1,7 +1,7 @@
 // Themes
-import type { ITheme } from '@/types/theme'
+import type { ThemeTypes } from '@/types/theme'
 
-export const LightTheme: ITheme = {
+export const LightTheme: ThemeTypes = {
   colors: {
     // BG
     primary: '#eceef9',
@@ -21,7 +21,7 @@ export const LightTheme: ITheme = {
   },
 }
 
-export const DarkTheme: ITheme = {
+export const DarkTheme: ThemeTypes = {
   colors: {
     // BG
     primary: '#070707',

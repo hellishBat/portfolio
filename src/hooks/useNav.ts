@@ -2,9 +2,10 @@
 import { useRef, useEffect } from 'react'
 import { useOnScreen } from './useOnScreen'
 import { useNavContext } from '@/context/NavContext'
+import type { UseNavReturnType } from '@/types/nav'
 
-export const useNav = (linkId: string) => {
-  const ref = useRef(null)
+export const useNav = (linkId: string): UseNavReturnType => {
+  const ref = useRef<HTMLElement | null>(null)
 
   const { setActiveNavLinkId } = useNavContext()
 
@@ -12,7 +13,7 @@ export const useNav = (linkId: string) => {
 
   useEffect(() => {
     if (isOnScreen) {
-      setActiveNavLinkId(linkId)
+      setActiveNavLinkId?.(linkId)
     }
   }, [isOnScreen, setActiveNavLinkId, linkId])
 

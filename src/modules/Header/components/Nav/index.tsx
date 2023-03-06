@@ -1,5 +1,5 @@
 // Nav
-import { FC, Key } from 'react'
+import { FC } from 'react'
 import { useMobileMenuContext } from '@/context/MobileMenuContext'
 import { NavLink } from '../'
 import * as S from './styles'
@@ -11,7 +11,7 @@ export const Nav: FC<NavProps> = ({ data }) => {
   return (
     <S.Nav isOpen={isOpen}>
       <S.Ul>
-        {data.map((link, idx: Key | null | undefined) => (
+        {data.map((link, idx) => (
           <S.Li onClick={toggleMenu} onBlur={closeMenu} onFocus={openMenu} key={idx}>
             <NavLink linkId={link.linkId} targetId={link.targetId} text={link.text} />
           </S.Li>

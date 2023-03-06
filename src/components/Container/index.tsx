@@ -1,8 +1,8 @@
 // Container
 import { FC } from 'react'
 import * as S from './styles'
-import type { ChildrenTypes } from '@/types'
+import type { ChildrenProps } from '@/types'
 
-export const Container: FC<ChildrenTypes> = ({ children }) => {
+export const Container: FC<ChildrenProps> = ({ children }) => {
   return <S.Container>{children}</S.Container>
 }

@@ -2,20 +2,20 @@
 import { ReactNode, MouseEvent } from 'react'
 
 // Common
-type ChildrenTypes = {
+interface ChildrenProps {
   children?: ReactNode | ReactNode[]
 }
 
-type ClickHandlerType = {
+interface ClickHandlerProps {
   clickHandler: (fn: any) => void
 }
 
 // Component-specific
-type LogoProps = {
+interface LogoProps {
   href: string
 }
 
-type ButtonProps = ChildrenTypes & {
+interface ButtonProps extends ChildrenProps {
   onClick?: (event: MouseEvent<HTMLButtonElement>) => void
   size?: 'sm' | 'md' | 'lg'
   variant?: 'primary' | 'secondary' | 'text' | 'icon'
@@ -27,59 +27,57 @@ type ButtonProps = ChildrenTypes & {
   id?: string
 }
 
-type LinkProps = ChildrenTypes & {
+interface LinkProps extends ChildrenProps {
   variant?: 'text' | 'icon'
   href?: string
   target?: '_blank'
   rel?: string
 }
 
-type TypographyProps = ChildrenTypes & {
+interface TypographyProps extends ChildrenProps {
   variant: Variant
   id?: string
 }
 
-type SectionProps = ChildrenTypes & {
+interface SectionProps extends ChildrenProps {
   id?: string
   imageUrl?: string
 }
 
-type SocialProps = ChildrenTypes & {
-  data?:
-    | {
-        href: string
-      }[]
-    | undefined
-  vertical?: boolean | undefined
+interface SocialProps extends ChildrenProps {
+  data?: { href: string }[]
+  vertical?: boolean
   size?: 'md' | 'lg'
 }
 
-type PersonProps = {
+interface PersonProps {
   image?: string
 }
 
-type WorksCardProps = {
+interface StackItem {
+  icon: JSX.Element
+  title: string
+  color?: any
+}
+
+interface WorksCardProps {
   data: {
     title: string
     text: string
     hrefDemo: string
     hrefRepo: string
     imgSrc: string
-    stack: {
-      icon: JSX.Element
-      title: string
-      color?: any
-    }[]
+    stack: StackItem[]
   }
 }
 
-type ChipProps = ChildrenTypes & {
+interface ChipProps extends ChildrenProps {
   color?: 'yellow' | 'brown' | 'cyan' | 'blue' | 'sky' | 'royal' | 'indigo' | 'pink'
 }
 
 export {
-  ChildrenTypes,
-  ClickHandlerType,
+  ChildrenProps,
+  ClickHandlerProps,
   LogoProps,
   ButtonProps,
   LinkProps,

@@ -4,9 +4,9 @@ import MobileMenuProvider from '@/context/MobileMenuContext'
 import Loader from '@/modules/Loader'
 import Header from '@/modules/Header'
 import Footer from '@/modules/Footer'
-import type { ChildrenTypes } from '@/types'
+import type { ChildrenProps } from '@/types'
 
-const Layout: FC<ChildrenTypes> = ({ children }) => {
+const Layout: FC<ChildrenProps> = ({ children }) => {
   const [loading, setLoading] = useState(true)
   useEffect(() => {
     setTimeout(() => {

@@ -1,29 +1,18 @@
 // mobileMenu Types
-// export interface IMobileMenuContext {
-//   toggleMenu: (fn: boolean) => void
-//   openMenu: (fn: boolean) => void
-//   closeMenu: (fn: boolean) => void
-//   isOpen: boolean
-// }
-
-// export interface IMobileMenuProviderProps {
-//   children: React.ReactNode
-// }
-
 import { ReactNode } from 'react'
 
-export interface IMobileMenuContext {
-  toggleMenu: (fn: boolean) => void
+export interface MobileMenuContextTypes {
+  toggleMenu: () => void
   openMenu: () => void
   closeMenu: () => void
   isOpen: boolean
 }
 
-export interface IMobileMenuProviderProps {
+export interface MobileMenuProviderTypes {
   children: ReactNode
 }
 
-export type MobileMenuProps = {
+export interface MobileMenuProps {
   isOpen: boolean
-  clickHandler?: (fn: any) => void
+  clickHandler?: () => void
 }

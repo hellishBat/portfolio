@@ -1,17 +1,20 @@
 // Nav Types
-import type { ChildrenTypes } from '@/types'
+import { MutableRefObject } from 'react'
 
-export interface INavContext {
+export interface NavContextTypes {
   activeNavLinkId: string
-  setActiveNavLinkId: (fn: string) => void
+  setActiveNavLinkId: (id: string) => void
 }
 
-export type NavProps = ChildrenTypes & {
-  data: NavLinkProps[]
-}
-
-export type NavLinkProps = ChildrenTypes & {
+export interface NavLinkProps {
   linkId: string
   targetId: string
   text: string
+  onClick?: () => void
 }
+
+export type NavProps = {
+  data: NavLinkProps[]
+}
+
+export type UseNavReturnType = MutableRefObject<HTMLElement | null>
