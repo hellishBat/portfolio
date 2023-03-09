@@ -11,7 +11,7 @@ interface ClickHandlerProps {
 }
 
 // Component-specific
-interface LogoProps {
+interface LogoProps extends ClickHandlerProps {
   href: string
 }
 

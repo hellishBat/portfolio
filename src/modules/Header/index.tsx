@@ -3,6 +3,7 @@ import { useThemeContext } from '@/context/ThemeContext'
 import { useMobileMenuContext } from '@/context/MobileMenuContext'
 import { Container } from '@/components'
 import { Nav, Logo, MenuButton, ThemeSwitch, ScrollIndicator } from './components'
+import { scrollToTop } from '@/utils/scrolling'
 import * as S from './styles'
 import { Mode } from '@/types/theme'
 import data from '@/data/index.json'
@@ -22,7 +23,7 @@ const Header = () => {
     <S.Header>
       <Container>
         <S.Wrapper>
-          <Logo href="#" />
+          <Logo href="#" clickHandler={scrollToTop} />
           <Nav data={navData} />
           <ThemeSwitch clickHandler={toggleMode} mode={mode} />
           <MenuButton clickHandler={toggleMenu} isOpen={isOpen} />

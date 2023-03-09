@@ -5,4 +5,5 @@ export const LogoLink = styled.a`
   display: flex;
   font-size: 2rem;
   line-height: 1;
+  border-radius: 50%;
 `
