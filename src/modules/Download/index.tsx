@@ -20,7 +20,7 @@ const Download = () => {
       .timeline({
         scrollTrigger: {
           trigger: '#downloadSection',
-          start: 'top bottom',
+          start: 'top 70%',
           end: 'top 40%',
         },
       })

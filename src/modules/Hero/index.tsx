@@ -30,7 +30,7 @@ const Hero = () => {
       scrollTrigger: {
         trigger: '#heroSection',
         start: 'bottom 33%',
-        end: 'bottom top',
+        end: 'bottom 0',
         scrub: true,
       },
       opacity: 0,

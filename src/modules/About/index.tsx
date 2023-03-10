@@ -22,7 +22,7 @@ const About = () => {
       scrollTrigger: {
         trigger: '#aboutSection',
         start: 'bottom 33%',
-        end: 'bottom top',
+        end: 'bottom 0',
         scrub: true,
       },
       opacity: 0,

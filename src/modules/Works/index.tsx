@@ -84,7 +84,7 @@ const Works = () => {
       scrollTrigger: {
         trigger: '#worksSection',
         start: 'bottom 33%',
-        end: 'bottom top',
+        end: 'bottom 0',
         scrub: true,
       },
       opacity: 0,

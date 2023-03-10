@@ -20,7 +20,7 @@ const Contacts = () => {
       .timeline({
         scrollTrigger: {
           trigger: '#contactsSection',
-          start: 'top bottom',
+          start: 'top 70%',
           end: 'top 50%',
         },
       })

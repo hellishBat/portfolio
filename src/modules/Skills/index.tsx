@@ -21,8 +21,8 @@ const Skills = () => {
       scrollTrigger: {
         trigger: '#skillsSection',
         start: 'bottom 33%',
-        end: 'bottom top',
-        scrub: true,
+        end: 'bottom 0',
+        scrub: 0,
       },
       opacity: 0,
     })

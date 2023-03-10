@@ -82,14 +82,14 @@
     "webpack-merge": "^5.8.0"
   },
   "dependencies": {
-    "gsap": "^3.11.3",
+    "gsap": "^3.11.4",
     "polished": "^4.2.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icon-cloud": "^4.1.4",
     "reseter.css": "^2.0.0",
-    "styled-components": "^5.3.5",
-    "swiper": "^8.4.4"
+    "styled-components": "^5.3.8",
+    "swiper": "^9.1.0"
   },
   "browserslist": {
     "production": [
