@@ -1,14 +1,14 @@
-import { useEffect, useState, useMemo, memo } from 'react'
-import { useTheme } from 'styled-components'
-import { fetchSimpleIcons, Cloud, renderSimpleIcon } from 'react-icon-cloud'
+// IconCloud
+import { useMemo, memo } from 'react'
+import { Cloud } from 'react-icon-cloud'
 import { useThemeContext } from '@/context/ThemeContext'
-import { Mode } from '@/types/theme'
-
-type IconData = Awaited<ReturnType<typeof fetchSimpleIcons>>
+import { useIconCloudData } from '@/hooks/useIconCloudData'
+import { useRenderCustomIcon } from '@/hooks/useRenderCustomIcon'
 
 export const IconCloud = memo(function IconCloud(props: any) {
   const { mode } = useThemeContext()
-  const theme = useTheme()
+  const data = useIconCloudData(props.iconSlugs)
+  const renderCustomIcon = useRenderCustomIcon()
 
   const cloudProps: any = {
     containerProps: {
@@ -32,28 +32,6 @@ export const IconCloud = memo(function IconCloud(props: any) {
     },
   }
 
-  const renderCustomIcon = (icon: any, mode?: Mode) => {
-    return renderSimpleIcon({
-      icon,
-      minContrastRatio: mode === Mode.Light ? 1 : 2,
-      bgHex: theme.colors.primary,
-      fallbackHex: theme.colors.textPrimary,
-      size: 42,
-      aProps: {
-        href: undefined,
-        target: undefined,
-        rel: undefined,
-        onClick: (e: any) => e.preventDefault(),
-      },
-    })
-  }
-
-  const [data, setData] = useState<IconData>()
-
-  useEffect(() => {
-    fetchSimpleIcons({ slugs: props.iconSlugs }).then(setData)
-  }, [props.iconSlugs])
-
   const renderedIcons = useMemo(() => {
     if (!data) {
       return null
@@ -65,7 +43,7 @@ export const IconCloud = memo(function IconCloud(props: any) {
     }
 
     return icons.map((i) => renderCustomIcon(i, mode))
-  }, [data, mode])
+  }, [data, mode, renderCustomIcon])
 
   return <Cloud {...cloudProps}>{renderedIcons}</Cloud>
 })

@@ -92,7 +92,7 @@ const VARIANT = {
   `,
 }
 
-export const StyledButton = styled.button<ButtonProps>`
+export const Button = styled.button<ButtonProps>`
   display: inline-flex;
   align-items: center;
   border-radius: 0.25rem;

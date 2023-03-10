@@ -13,31 +13,28 @@ enum Variant {
 }
 
 export const Typography: FC<TypographyProps> = ({ variant, id, children }) => {
-  let component
+  let renderedElement
 
-  if (variant === Variant.H1) {
-    component = <S.Title id={id}>{children}</S.Title>
+  switch (variant) {
+    case Variant.H1:
+      renderedElement = <S.Title id={id}>{children}</S.Title>
+      break
+    case Variant.H2:
+      renderedElement = <S.Subtitle id={id}>{children}</S.Subtitle>
+      break
+    case Variant.H3:
+      renderedElement = <S.Heading id={id}>{children}</S.Heading>
+      break
+    case Variant.H4:
+      renderedElement = <S.Subheading>{children}</S.Subheading>
+      break
+    case Variant.H5:
+      renderedElement = <S.CardHeading>{children}</S.CardHeading>
+      break
+    case Variant.P:
+    default:
+      renderedElement = <S.Paragraph>{children}</S.Paragraph>
   }
 
-  if (variant === Variant.H2) {
-    component = <S.Subtitle id={id}>{children}</S.Subtitle>
-  }
-
-  if (variant === Variant.H3) {
-    component = <S.Heading id={id}>{children}</S.Heading>
-  }
-
-  if (variant === Variant.H4) {
-    component = <S.Subheading>{children}</S.Subheading>
-  }
-
-  if (variant === Variant.H5) {
-    component = <S.CardHeading>{children}</S.CardHeading>
-  }
-
-  if (variant === Variant.P) {
-    component = <S.Paragraph>{children}</S.Paragraph>
-  }
-
-  return <>{component}</>
+  return <>{renderedElement}</>
 }
