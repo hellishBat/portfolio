@@ -4,10 +4,10 @@ import MobileMenuProvider from '@/context/MobileMenuContext'
 import Loader from '@/modules/Loader'
 import Header from '@/modules/Header'
 import Footer from '@/modules/Footer'
-import { useLoader } from '@/hooks/useLoader'
-import type { ChildrenProps } from '@/types'
+import { useLoader } from '@/hooks'
+import type { ChildrenProp } from '@/types'
 
-const Layout: FC<ChildrenProps> = ({ children }) => {
+const Layout: FC<ChildrenProp> = ({ children }) => {
   const isLoading = useLoader()
 
   return (

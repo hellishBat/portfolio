@@ -2,20 +2,20 @@
 import { ReactNode, MouseEvent } from 'react'
 
 // Common
-interface ChildrenProps {
+interface ChildrenProp {
   children?: ReactNode | ReactNode[]
 }
 
-interface ClickHandlerProps {
+interface ClickHandlerProp {
   clickHandler: (fn: any) => void
 }
 
 // Component-specific
-interface LogoProps extends ClickHandlerProps {
+interface LogoProps extends ClickHandlerProp {
   href: string
 }
 
-interface ButtonProps extends ChildrenProps {
+interface ButtonProps extends ChildrenProp {
   onClick?: (event: MouseEvent<HTMLButtonElement>) => void
   size?: 'sm' | 'md' | 'lg'
   variant?: 'primary' | 'secondary' | 'text' | 'icon'
@@ -27,24 +27,19 @@ interface ButtonProps extends ChildrenProps {
   id?: string
 }
 
-interface LinkProps extends ChildrenProps {
+interface LinkProps extends ChildrenProp {
   variant?: 'text' | 'icon'
   href?: string
   target?: '_blank'
   rel?: string
 }
 
-interface TypographyProps extends ChildrenProps {
+interface TypographyProps extends ChildrenProp {
   variant: Variant
   id?: string
 }
 
-interface SectionProps extends ChildrenProps {
-  id?: string
-  imageUrl?: string
-}
-
-interface SocialProps extends ChildrenProps {
+interface SocialProps extends ChildrenProp {
   data?: { href: string }[]
   vertical?: boolean
   size?: 'md' | 'lg'
@@ -54,7 +49,7 @@ interface PersonProps {
   image?: string
 }
 
-interface StackItem {
+interface StackItemProps {
   icon: JSX.Element
   title: string
   color?: any
@@ -67,22 +62,21 @@ interface WorksCardProps {
     hrefDemo: string
     hrefRepo: string
     imgSrc: string
-    stack: StackItem[]
+    stack: StackItemProps[]
   }
 }
 
-interface ChipProps extends ChildrenProps {
+interface ChipProps extends ChildrenProp {
   color?: 'yellow' | 'brown' | 'cyan' | 'blue' | 'sky' | 'royal' | 'indigo' | 'pink'
 }
 
 export {
-  ChildrenProps,
-  ClickHandlerProps,
+  ChildrenProp,
+  ClickHandlerProp,
   LogoProps,
   ButtonProps,
   LinkProps,
   TypographyProps,
-  SectionProps,
   SocialProps,
   PersonProps,
   WorksCardProps,

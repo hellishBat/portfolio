@@ -1,4 +1,4 @@
-// useRenderCustomIcon Hook
+// useRenderCustomIcon
 import { useCallback } from 'react'
 import { useTheme } from 'styled-components'
 import { renderSimpleIcon } from 'react-icon-cloud'

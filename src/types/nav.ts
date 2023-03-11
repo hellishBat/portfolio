@@ -1,7 +1,7 @@
 // Nav Types
 import { MutableRefObject } from 'react'
 
-export interface NavContextTypes {
+export interface NavContextValue {
   activeNavLinkId: string
   setActiveNavLinkId: (id: string) => void
 }
@@ -13,8 +13,8 @@ export interface NavLinkProps {
   onClick?: () => void
 }
 
-export type NavProps = {
+export type NavDataProps = {
   data: NavLinkProps[]
 }
 
-export type UseNavReturnType = MutableRefObject<HTMLElement | null>
+export type NavRef = MutableRefObject<HTMLElement | null>

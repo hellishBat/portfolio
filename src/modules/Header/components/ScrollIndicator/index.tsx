@@ -1,5 +1,5 @@
 //ScrollIndicator
-import { useScrollIndicator } from '@/hooks/useScrollIndicator'
+import { useScrollIndicator } from '@/hooks'
 import * as S from './styles'
 
 export const ScrollIndicator = () => {

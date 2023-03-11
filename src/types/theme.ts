@@ -6,11 +6,11 @@ export enum Mode {
   Dark = 'dark',
 }
 
-export interface ThemeProviderTypes {
+export interface ThemeProviderProps {
   children: ReactNode
 }
 
-export interface ThemeContextTypes {
+export interface ThemeContextValue {
   changeMode: (mode: Mode) => void
   mode: Mode
 }
@@ -27,11 +27,11 @@ export interface ThemeColorPalette {
   textSecondary: string
 }
 
-export interface ThemeTypes {
+export interface Theme {
   colors: ThemeColorPalette
 }
 
-export type ThemeSwitchProps = {
+export type ThemeSwitchButtonProps = {
   clickHandler: () => void
   mode: Mode
 }

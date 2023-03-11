@@ -4,6 +4,7 @@ import { media } from '@/styles/media'
 
 export const Section = styled.section`
   padding: 4rem 0;
+  will-change: opacity;
 
   &:nth-child(odd) {
     background-color: ${({ theme }) => theme.colors.secondary};

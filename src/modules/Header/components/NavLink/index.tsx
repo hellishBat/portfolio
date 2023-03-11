@@ -1,7 +1,7 @@
 // NavLink
 import { FC } from 'react'
 import * as S from './styles'
-import { useNavContext } from '@/context/NavContext'
+import { useNavContext } from '@/context'
 import { scrollToSection } from '@/utils/scrolling'
 import type { NavLinkProps } from '@/types/nav'
 

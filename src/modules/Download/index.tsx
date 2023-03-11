@@ -1,8 +1,7 @@
 // Download
-import { useLayoutEffect } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import { useNav } from '@/hooks/useNav'
+import { useIsomorphicLayoutEffect, useNav } from '@/hooks'
 import { Container, Typography, Button } from '@/components'
 import * as SC from '@/styles/common'
 import data from '@/data/index.json'
@@ -10,12 +9,12 @@ import { IconDownload } from '@/assets'
 
 const downloadData = data.download
 
+gsap.registerPlugin(ScrollTrigger)
+
 const Download = () => {
   const downloadRef = useNav('Download')
 
-  gsap.registerPlugin(ScrollTrigger)
-
-  useLayoutEffect(() => {
+  useIsomorphicLayoutEffect(() => {
     gsap
       .timeline({
         scrollTrigger: {

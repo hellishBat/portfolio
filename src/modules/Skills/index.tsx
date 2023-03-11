@@ -1,38 +1,25 @@
 // Skills
-import { useLayoutEffect } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { Container, Typography } from '@/components'
 import { IconCloud } from './components'
-import { useNav } from '@/hooks/useNav'
+import { useIsomorphicLayoutEffect, useNav } from '@/hooks'
 import * as S from './styles'
 import * as SC from '@/styles/common'
 import data from '@/data/index.json'
 
 const skillsData = data.skills
 
+gsap.registerPlugin(ScrollTrigger)
+
 const Skills = () => {
   const skillsRef = useNav('Skills')
 
-  gsap.registerPlugin(ScrollTrigger)
-
-  useLayoutEffect(() => {
-    gsap.to('#skillsSection', {
-      scrollTrigger: {
-        trigger: '#skillsSection',
-        start: 'bottom 33%',
-        end: 'bottom 0',
-        scrub: 0,
-      },
-      opacity: 0,
-    })
-
+  useIsomorphicLayoutEffect(() => {
     gsap
       .timeline({
         scrollTrigger: {
           trigger: '#skillsSection',
-          start: 'top 70%',
-          end: 'top 33%',
         },
       })
       .from('#skillsHeading', {
@@ -63,6 +50,16 @@ const Skills = () => {
         duration: 0.25,
         ease: 'back',
       })
+
+    gsap.to('#skillsSection', {
+      scrollTrigger: {
+        trigger: '#skillsSection',
+        start: 'bottom 33%',
+        end: 'bottom 0',
+        scrub: true,
+      },
+      opacity: 0,
+    })
 
     ScrollTrigger.refresh()
   }, [])

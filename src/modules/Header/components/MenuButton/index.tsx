@@ -1,7 +1,7 @@
 // MenuButton
 import { FC } from 'react'
 import * as S from './styles'
-import type { MobileMenuProps } from '@/types/mobileMenu'
+import type { MobileMenuButtonProps } from '@/types/mobileMenu'
 
 const svgPaths = [
   {
@@ -13,7 +13,7 @@ const svgPaths = [
   },
 ]
 
-export const MenuButton: FC<MobileMenuProps> = ({ clickHandler, isOpen }) => {
+export const MenuButton: FC<MobileMenuButtonProps> = ({ clickHandler, isOpen }) => {
   return (
     <S.Button isOpen={isOpen} title="Navigation Menu" type="button" onClick={clickHandler}>
       <svg width={40} height={40} viewBox="0 0 100 100">

@@ -2,9 +2,9 @@
 import { FC } from 'react'
 import AppThemeProvider from './ThemeContext'
 import NavProvider from './NavContext'
-import type { ChildrenProps } from '@/types'
+import type { ChildrenProp } from '@/types'
 
-const ContextProviders: FC<ChildrenProps> = ({ children }) => {
+const ContextProviders: FC<ChildrenProp> = ({ children }) => {
   return (
     <AppThemeProvider>
       <NavProvider>{children}</NavProvider>

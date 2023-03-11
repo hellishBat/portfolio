@@ -1,11 +1,11 @@
 // NavContext
 import { useState, createContext, FC, useContext } from 'react'
-import type { ChildrenProps } from '@/types'
-import type { NavContextTypes } from '@/types/nav'
+import type { ChildrenProp } from '@/types'
+import type { NavContextValue } from '@/types/nav'
 
-const NavContext = createContext({} as NavContextTypes)
+const NavContext = createContext({} as NavContextValue)
 
-const NavProvider: FC<ChildrenProps> = ({ children }) => {
+const NavProvider: FC<ChildrenProp> = ({ children }) => {
   const [activeNavLinkId, setActiveNavLinkId] = useState<string>('')
 
   const providerValue = {

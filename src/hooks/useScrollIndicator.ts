@@ -1,4 +1,4 @@
-// useScrollIndicator Hook
+// useScrollIndicator
 import { useState, useEffect, useCallback } from 'react'
 
 export const useScrollIndicator = () => {

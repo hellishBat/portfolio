@@ -1,4 +1,4 @@
-// useIconCloudData Hook
+// useIconCloudData
 import { useEffect, useState } from 'react'
 import { fetchSimpleIcons } from 'react-icon-cloud'
 

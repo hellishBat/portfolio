@@ -1,10 +1,9 @@
 // Hero
-import { useLayoutEffect } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import { useThemeContext } from '@/context/ThemeContext'
+import { useThemeContext } from '@/context'
 import { Container, Typography, Button, Social } from '@/components'
-import { useNav } from '@/hooks/useNav'
+import { useIsomorphicLayoutEffect, useNav } from '@/hooks'
 import { scrollToSection } from '@/utils/scrolling'
 import * as S from './styles'
 import data from '@/data/index.json'
@@ -13,6 +12,8 @@ import { Mode } from '@/types/theme'
 
 const heroData = data.hero
 const socialLinks = data.social.links
+
+gsap.registerPlugin(ScrollTrigger)
 
 const handleClick = (e: { preventDefault: () => void }) => {
   e.preventDefault()
@@ -23,19 +24,7 @@ const Hero = () => {
   const { mode } = useThemeContext()
   const heroRef = useNav('Hero')
 
-  gsap.registerPlugin(ScrollTrigger)
-
-  useLayoutEffect(() => {
-    gsap.to('#heroSection', {
-      scrollTrigger: {
-        trigger: '#heroSection',
-        start: 'bottom 33%',
-        end: 'bottom 0',
-        scrub: true,
-      },
-      opacity: 0,
-    })
-
+  useIsomorphicLayoutEffect(() => {
     gsap
       .timeline({
         scrollTrigger: {
@@ -77,6 +66,16 @@ const Hero = () => {
         duration: 0.5,
         ease: 'sine',
       })
+
+    gsap.to('#heroSection', {
+      scrollTrigger: {
+        trigger: '#heroSection',
+        start: 'bottom 33%',
+        end: 'bottom 0',
+        scrub: true,
+      },
+      opacity: 0,
+    })
 
     ScrollTrigger.refresh()
   }, [])

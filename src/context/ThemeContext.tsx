@@ -3,21 +3,21 @@ import { createContext, useContext, useEffect, useState } from 'react'
 import { ThemeProvider } from 'styled-components'
 import { LightTheme, DarkTheme } from '@/themes'
 import GlobalStyles from '@/styles/global'
-import type { ThemeContextTypes, ThemeProviderTypes, ThemeTypes } from '@/types/theme'
 import { Mode } from '@/types/theme'
+import type { ThemeContextValue, ThemeProviderProps, Theme } from '@/types/theme'
 
 const getInitialMode = (): Mode => {
   const isDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
   return isDark ? Mode.Dark : Mode.Light
 }
 
-const AppThemeContext = createContext<ThemeContextTypes>({
+const AppThemeContext = createContext<ThemeContextValue>({
   changeMode: () => {},
   mode: Mode.Light,
 })
 
-const AppThemeProvider = ({ children }: ThemeProviderTypes) => {
-  const [theme, setTheme] = useState<ThemeTypes>(LightTheme)
+const AppThemeProvider = ({ children }: ThemeProviderProps) => {
+  const [theme, setTheme] = useState<Theme>(LightTheme)
   const [mode, setMode] = useState<Mode>(getInitialMode())
 
   const changeMode = (mode: Mode | any) => {

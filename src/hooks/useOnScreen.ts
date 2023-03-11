@@ -1,4 +1,4 @@
-// useOnScreen Hook
+// useOnScreen
 import { useState, useEffect, useMemo, MutableRefObject } from 'react'
 
 export const useOnScreen = (ref: MutableRefObject<Element | null>): boolean => {

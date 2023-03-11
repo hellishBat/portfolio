@@ -1,5 +1,4 @@
 // Works
-import { useLayoutEffect } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { Swiper, SwiperSlide } from 'swiper/react'
@@ -7,7 +6,7 @@ import { FreeMode, Keyboard, Mousewheel } from 'swiper'
 import 'swiper/scss'
 import 'swiper/scss/free-mode'
 import 'swiper/scss/keyboard'
-import { useNav } from '@/hooks/useNav'
+import { useIsomorphicLayoutEffect, useNav } from '@/hooks'
 import { Container, Typography } from '@/components'
 import { WorksCard } from './components'
 import * as SC from '@/styles/common'
@@ -74,22 +73,12 @@ const worksContent = worksAssets
   }))
   .reverse()
 
+gsap.registerPlugin(ScrollTrigger)
+
 const Works = () => {
   const worksRef = useNav('Works')
 
-  gsap.registerPlugin(ScrollTrigger)
-
-  useLayoutEffect(() => {
-    gsap.to('#worksSection', {
-      scrollTrigger: {
-        trigger: '#worksSection',
-        start: 'bottom 33%',
-        end: 'bottom 0',
-        scrub: true,
-      },
-      opacity: 0,
-    })
-
+  useIsomorphicLayoutEffect(() => {
     gsap
       .timeline({
         scrollTrigger: {
@@ -112,6 +101,16 @@ const Works = () => {
         duration: 1.25,
         ease: 'sine',
       })
+
+    gsap.to('#worksSection', {
+      scrollTrigger: {
+        trigger: '#worksSection',
+        start: 'bottom 33%',
+        end: 'bottom 0',
+        scrub: true,
+      },
+      opacity: 0,
+    })
 
     ScrollTrigger.refresh()
   }, [])

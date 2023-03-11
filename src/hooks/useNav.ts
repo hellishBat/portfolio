@@ -1,10 +1,10 @@
-// useNav Hook
+// useNav
 import { useRef, useEffect } from 'react'
 import { useOnScreen } from './useOnScreen'
 import { useNavContext } from '@/context/NavContext'
-import type { UseNavReturnType } from '@/types/nav'
+import type { NavRef } from '@/types/nav'
 
-export const useNav = (linkId: string): UseNavReturnType => {
+export const useNav = (linkId: string): NavRef => {
   const ref = useRef<HTMLElement | null>(null)
 
   const { setActiveNavLinkId } = useNavContext()

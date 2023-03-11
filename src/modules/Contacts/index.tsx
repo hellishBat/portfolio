@@ -1,8 +1,7 @@
 // Contacts
-import { useLayoutEffect } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import { useNav } from '@/hooks/useNav'
+import { useIsomorphicLayoutEffect, useNav } from '@/hooks'
 import { Container, Typography } from '@/components'
 import { Address } from './components'
 import * as SC from '@/styles/common'
@@ -10,12 +9,12 @@ import data from '@/data/index.json'
 
 const contactsData = data.contacts
 
+gsap.registerPlugin(ScrollTrigger)
+
 const Contacts = () => {
   const contactsRef = useNav('Contacts')
 
-  gsap.registerPlugin(ScrollTrigger)
-
-  useLayoutEffect(() => {
+  useIsomorphicLayoutEffect(() => {
     gsap
       .timeline({
         scrollTrigger: {

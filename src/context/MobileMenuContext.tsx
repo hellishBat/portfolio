@@ -1,10 +1,10 @@
 // MobileMenuContext
 import { createContext, useContext, useState, useEffect } from 'react'
-import type { MobileMenuContextTypes, MobileMenuProviderTypes } from '@/types/mobileMenu'
+import type { MobileMenuContextValue, MobileMenuProviderProps } from '@/types/mobileMenu'
 
-const MobileMenuContext = createContext({} as MobileMenuContextTypes)
+const MobileMenuContext = createContext({} as MobileMenuContextValue)
 
-const MobileMenuProvider = ({ children }: MobileMenuProviderTypes) => {
+const MobileMenuProvider = ({ children }: MobileMenuProviderProps) => {
   const [isOpen, setIsOpen] = useState(false)
 
   useEffect(() => {

@@ -1,8 +1,7 @@
 // About
-import { useLayoutEffect } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import { useNav } from '@/hooks/useNav'
+import { useIsomorphicLayoutEffect, useNav } from '@/hooks'
 import { Container, Typography } from '@/components'
 import { Person } from './components'
 import * as S from './styles'
@@ -12,22 +11,12 @@ import { authorPhoto } from '@/assets'
 
 const aboutData = data.about
 
+gsap.registerPlugin(ScrollTrigger)
+
 const About = () => {
   const aboutRef = useNav('About')
 
-  gsap.registerPlugin(ScrollTrigger)
-
-  useLayoutEffect(() => {
-    gsap.to('#aboutSection', {
-      scrollTrigger: {
-        trigger: '#aboutSection',
-        start: 'bottom 33%',
-        end: 'bottom 0',
-        scrub: true,
-      },
-      opacity: 0,
-    })
-
+  useIsomorphicLayoutEffect(() => {
     gsap
       .timeline({
         scrollTrigger: {
@@ -64,6 +53,16 @@ const About = () => {
         duration: 1.25,
         ease: 'sine',
       })
+
+    gsap.to('#aboutSection', {
+      scrollTrigger: {
+        trigger: '#aboutSection',
+        start: 'bottom 33%',
+        end: 'bottom 0',
+        scrub: true,
+      },
+      opacity: 0,
+    })
 
     ScrollTrigger.refresh()
   }, [])
