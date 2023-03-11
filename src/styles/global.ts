@@ -68,16 +68,10 @@ const GlobalStyles = createGlobalStyle`
   }
 
   // Spacing
-  --header-size: 3.5rem;
   --spacing-sm: 1rem;
   
   ${media.sm} {
-    --header-size: 4.5rem;
     --spacing-sm: 1.5rem;
-  }
-
-  ${media.lg} {
-    --header-size: 5rem;
   }
 }
 
@@ -88,18 +82,7 @@ html,
   box-sizing: border-box;
 }
 
-html,
 body {
-  width: 100%;
-  height: 100%;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  padding-top: var(--header-size);
   background-color: ${({ theme }) => theme.colors.primary};
   font-size: 16px;
   line-height: 1.5;
@@ -107,12 +90,12 @@ body {
   color: ${({ theme }) => theme.colors.textPrimary};
 
   &.isLocked {
-      overflow: hidden;
+      overflow-y: hidden;
     }
 
   ${media.lg} {
     &.isLocked {
-      overflow: unset;
+      overflow-y: unset;
     }
   }
 }
@@ -120,12 +103,12 @@ body {
 #root {
   display: flex;
   flex-direction: column;
-  min-height: 100%;
-  overflow: hidden;
+  min-height: 100dvh;
 }
 
 main {
   flex: 1 0 auto;
+  overflow-x: hidden;
 }
 
 header,

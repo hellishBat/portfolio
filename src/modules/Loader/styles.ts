@@ -23,15 +23,14 @@ const elasticShake = keyframes`
   100% {
     transform: scale3d(1, 1, 1);
   }
-  
-  `
+`
 
 const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 80vh;
+  height: 100dvh;
 `
 
 const LogoWrapper = styled.figure`
