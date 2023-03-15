@@ -61,19 +61,24 @@ module.exports = merge(common, {
       new CssMinimizerPlugin(),
       new ImageMinimizerPlugin({
         minimizer: {
-          implementation: ImageMinimizerPlugin.squooshMinify,
+          implementation: ImageMinimizerPlugin.sharpMinify,
           options: {
             encodeOptions: {
-              mozjpeg: {
+              jpeg: {
                 quality: 90,
               },
-              pngquant: {
-                quality: [0.8, 1],
-                strip: true,
-                speed: 1,
+              webp: {
+                quality: 90,
               },
-              optipng: {},
-              gifsicle: {},
+              avif: {
+                quality: 90,
+              },
+              png: {
+                quality: 90,
+              },
+              gif: {
+                quality: 90,
+              },
             },
           },
         },
@@ -81,7 +86,7 @@ module.exports = merge(common, {
           {
             // You can apply generator using `?as=webp`, you can use any name and provide more options
             preset: 'webp',
-            implementation: ImageMinimizerPlugin.squooshGenerate,
+            implementation: ImageMinimizerPlugin.sharpGenerate,
             options: {
               encodeOptions: {
                 webp: {
@@ -93,11 +98,11 @@ module.exports = merge(common, {
           {
             // You can apply generator using `?as=avif`, you can use any name and provide more options
             preset: 'avif',
-            implementation: ImageMinimizerPlugin.squooshGenerate,
+            implementation: ImageMinimizerPlugin.sharpGenerate,
             options: {
               encodeOptions: {
                 avif: {
-                  cqLevel: 33,
+                  quality: 90,
                 },
               },
             },
