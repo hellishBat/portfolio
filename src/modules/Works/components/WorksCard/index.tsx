@@ -13,7 +13,7 @@ export const WorksCard: FC<WorksCardProps> = ({ data }) => {
   return (
     <S.Card>
       <S.Figure>
-        <S.Img src={data.imgSrc} alt={`${data.title} - ${data.text}`} loading="lazy" />
+        <S.Img src={data.imgSrc} alt={`Preview image of ${data.title}`} loading="lazy" />
       </S.Figure>
       <S.Body>
         <Typography variant="h5">{data.title}</Typography>
