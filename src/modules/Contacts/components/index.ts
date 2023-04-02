@@ -1,2 +1,2 @@
 // Contacts Components
-export { Address } from './Address'
+export * from './Address'

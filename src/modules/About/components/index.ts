@@ -1,2 +1,2 @@
 // About Components
-export { Person } from './Person'
+export * from './Person'

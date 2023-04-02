@@ -1,3 +1,3 @@
 // Works Components
-export { WorksCard } from './WorksCard'
-export { Chip } from './Chip'
+export * from './WorksCard'
+export * from './Chip'

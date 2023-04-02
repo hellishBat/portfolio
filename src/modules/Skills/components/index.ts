@@ -1,2 +1,2 @@
 // Skills Components
-export { IconCloud } from './IconCloud'
+export * from './IconCloud'
