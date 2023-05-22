@@ -28,27 +28,36 @@ const Body = styled.div`
 `
 
 const Figure = styled.figure`
+  position: relative;
   flex: 1 0 auto;
   overflow: hidden;
 
+  &::before {
+    content: '';
+    display: block;
+    padding-top: calc((10 / 16) * 100%);
+  }
+
   ${media.lg} {
-    aspect-ratio: 1/1;
     flex-basis: 50%;
+    width: 100%;
+
+    &::before {
+      padding-top: 100%;
+    }
   }
 `
 
 const Img = styled.img`
-  max-width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   height: 100%;
-  aspect-ratio: 16/10;
   object-fit: cover;
   object-position: top;
   transition: transform 0.25s ease-out;
   will-change: transform;
-
-  ${media.lg} {
-    aspect-ratio: 1/1;
-  }
 `
 
 const TagArray = styled.ul`
