@@ -35,7 +35,7 @@ const Figure = styled.figure`
   &::before {
     content: '';
     display: block;
-    padding-top: calc((10 / 16) * 100%);
+    padding-top: calc((3 / 4) * 100%);
   }
 
   ${media.lg} {
