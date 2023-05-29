@@ -147,7 +147,7 @@
       },
       {
         "title": "Krypto",
-        "text": "A cryptocurrency page made using React, Axios and CoinGecko API, styled with TailwindCSS.",
+        "text": "A cryptocurrency page made using React and CoinGecko API, styled with TailwindCSS.",
         "hrefDemo": "https://krypto-trading.vercel.app/",
         "hrefRepo": "https://github.com/valentine-samoylov/krypto-trading"
       },

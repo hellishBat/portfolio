@@ -58,7 +58,7 @@ const worksAssets = [
   },
   {
     imgSrc: previewKrypto,
-    stack: [stackIcons[5], stackIcons[7], stackIcons[8]],
+    stack: [stackIcons[5], stackIcons[4], stackIcons[8]],
   },
   {
     imgSrc: previewWeatherInsight,
