@@ -6,7 +6,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const Dotenv = require('dotenv-webpack')
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin')
 const paths = require('./paths')
-const HEAD_DATA = require('../public/template/head-data')
+const APP_INFO = require('../_info')
 
 module.exports = {
   entry: [`${paths.src}/index.tsx`],
@@ -45,16 +45,15 @@ module.exports = {
           from: paths.public,
           to: 'assets',
           globOptions: {
-            ignore: ['*.DS_Store', '**/template/*'],
+            ignore: ['*.DS_Store'],
           },
           noErrorOnMissing: true,
         },
       ],
     }),
     new HtmlWebpackPlugin({
-      title: 'webpack Boilerplate',
-      template: `${paths.public}/template/template.ejs`,
-      templateParameters: HEAD_DATA,
+      template: `${paths.src}/template.ejs`,
+      templateParameters: APP_INFO,
       filename: 'index.html',
       inject: 'body',
     }),
