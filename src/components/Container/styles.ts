@@ -1,7 +1,7 @@
 // Container Styles
 import styled from 'styled-components'
 import { media } from '@/styles/media'
-import { mxWidth } from '@/constants'
+import { mxWidth } from '@/styles/constants'
 
 export const Container = styled.div`
   margin: 0 auto;

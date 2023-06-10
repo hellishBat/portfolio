@@ -130,30 +130,35 @@
       {
         "title": "Mountain",
         "text": "Snowboarding and ski school landing page with parallax effect and scroll-triggered animations.",
+        "stack": ["pug", "sass", "js"],
         "hrefDemo": "https://mountain-school.vercel.app/",
         "hrefRepo": "https://github.com/valentine-samoylov/mountain/"
       },
       {
         "title": "Porten",
         "text": "A pixel-perfect men's shop landing page with scrolling animations, made with Pug, SASS and JS.",
+        "stack": ["pug", "sass", "js"],
         "hrefDemo": "https://porten-shop.vercel.app/",
         "hrefRepo": "https://github.com/valentine-samoylov/porten-shop/"
       },
       {
         "title": "Calculator App",
         "text": "A simple calculator app, made using React and styled with CSS.",
+        "stack": ["react", "css"],
         "hrefDemo": "https://vs-calculator-app.vercel.app/",
         "hrefRepo": "https://github.com/valentine-samoylov/calculator-app/"
       },
       {
         "title": "Krypto",
         "text": "A cryptocurrency page made using React and CoinGecko API, styled with TailwindCSS.",
+        "stack": ["react", "ts", "tailwind"],
         "hrefDemo": "https://krypto-trading.vercel.app/",
         "hrefRepo": "https://github.com/valentine-samoylov/krypto-trading"
       },
       {
         "title": "WeatherInsight",
         "text": "React weather app with location or city search, made using OpenWeather, Unsplash, GeoDB Cities and IPWHOIS.io APIs.",
+        "stack": ["react", "ts", "reactQuery", "axios", "tailwind"],
         "hrefDemo": "https://weatherinsight.vercel.app/",
         "hrefRepo": "https://github.com/valentine-samoylov/weatherinsight"
       }
@@ -184,19 +189,24 @@
   "social": {
     "links": [
       {
-        "href": "https://github.com/valentine-samoylov"
+        "href": "https://github.com/valentine-samoylov",
+        "name": "github"
       },
       {
-        "href": "https://www.linkedin.com/in/valentine-samoylov/"
+        "href": "https://www.linkedin.com/in/valentine-samoylov/",
+        "name": "linkedin"
       },
       {
-        "href": "https://join.skype.com/invite/fjnLBWvnMhpk"
+        "href": "https://join.skype.com/invite/fjnLBWvnMhpk",
+        "name": "skype"
       },
       {
-        "href": "https://t.me/valentine_samoylov/"
+        "href": "https://t.me/valentine_samoylov/",
+        "name": "telegram"
       },
       {
-        "href": "https://www.instagram.com/valentine.samoylov/"
+        "href": "https://www.instagram.com/valentine.samoylov/",
+        "name": "instagram"
       }
     ]
   },

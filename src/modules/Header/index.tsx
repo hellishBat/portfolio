@@ -22,10 +22,10 @@ const Header = () => {
     <S.Header>
       <Container>
         <S.Wrapper>
-          <Logo href="#" clickHandler={scrollToTop} />
+          <Logo href="#" onClick={scrollToTop} />
           <Nav data={navData} />
-          <ThemeSwitch clickHandler={toggleMode} mode={mode} />
-          <MenuButton clickHandler={toggleMenu} isOpen={isOpen} />
+          <ThemeSwitch onClick={toggleMode} mode={mode} />
+          <MenuButton onClick={toggleMenu} isOpen={isOpen} />
         </S.Wrapper>
       </Container>
       <ScrollIndicator />

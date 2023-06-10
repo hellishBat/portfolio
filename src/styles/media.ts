@@ -1,5 +1,5 @@
 // Media
-import { breakpoints } from '@/constants'
+import { breakpoints } from '@/styles/constants'
 
 const media = {
   xs: `@media (min-width: ${breakpoints.xs}px)`,

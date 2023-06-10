@@ -6,8 +6,22 @@ import { Container, Typography } from '@/components'
 import { Address } from './components'
 import * as SC from '@/styles/common'
 import data from '@/data/index.json'
+import { IconPhone, IconMail } from '@/assets'
 
+const socialLinks = data.social.links
 const contactsData = data.contacts
+
+const contactsIcons = [
+  { icon: <IconPhone /> },
+  {
+    icon: <IconMail />,
+  },
+]
+
+const contactsLinks = contactsData.links.map((item, idx) => ({
+  ...item,
+  ...contactsIcons[idx],
+}))
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -37,14 +51,14 @@ const Contacts = () => {
         duration: 0.75,
         ease: 'sine',
       })
-      .from('#addressList a', {
+      .from('#contactsList a', {
         yPercent: 50,
         opacity: 0,
         stagger: 0.15,
         duration: 0.5,
         ease: 'sine',
       })
-      .from('#addressSocial li', {
+      .from('#contactsSocial li', {
         scale: 0,
         opacity: 0,
         stagger: 0.15,
@@ -60,7 +74,7 @@ const Contacts = () => {
       <Container>
         <Typography variant="h3">{contactsData.heading}</Typography>
         <Typography variant="h4">{contactsData.subheading}</Typography>
-        <Address />
+        <Address contactsData={contactsLinks} socialData={socialLinks} />
       </Container>
     </SC.Section>
   )

@@ -1,7 +1,7 @@
 // Global Styles
 import { createGlobalStyle } from 'styled-components'
 import { rgba } from 'polished'
-import { mxWidth } from '@/constants'
+import { mxWidth } from '@/styles/constants'
 import { media } from '@/styles/media'
 import './fonts.css'
 

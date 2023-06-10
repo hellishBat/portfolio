@@ -21,10 +21,7 @@ export const WorksCard: FC<WorksCardProps> = ({ data }) => {
         <S.TagArray>
           {data.stack.map((stackItem, idx) => (
             <li key={idx}>
-              <Chip color={stackItem.color}>
-                {stackItem.icon}
-                <span>{stackItem.title}</span>
-              </Chip>
+              <Chip technology={stackItem} />
             </li>
           ))}
         </S.TagArray>

@@ -14,5 +14,5 @@ export interface MobileMenuProviderProps {
 
 export interface MobileMenuButtonProps {
   isOpen: boolean
-  clickHandler?: () => void
+  onClick: () => void
 }

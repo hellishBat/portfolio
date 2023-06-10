@@ -32,6 +32,6 @@ export interface Theme {
 }
 
 export type ThemeSwitchButtonProps = {
-  clickHandler: () => void
+  onClick: () => void
   mode: Mode
 }

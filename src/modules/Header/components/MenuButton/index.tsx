@@ -13,9 +13,9 @@ const svgPaths = [
   },
 ]
 
-export const MenuButton: FC<MobileMenuButtonProps> = ({ clickHandler, isOpen }) => {
+export const MenuButton: FC<MobileMenuButtonProps> = ({ onClick, isOpen }) => {
   return (
-    <S.Button isOpen={isOpen} title="Navigation Menu" type="button" onClick={clickHandler}>
+    <S.Button isOpen={isOpen} title="Navigation Menu" type="button" onClick={onClick}>
       <svg width={40} height={40} viewBox="0 0 100 100">
         {svgPaths.map((svgPath, idx) => (
           <path d={svgPath.d} key={idx} />

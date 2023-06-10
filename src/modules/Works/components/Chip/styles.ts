@@ -1,6 +1,6 @@
 // Chip Styles
 import styled, { css } from 'styled-components'
-import { ChipProps } from '@/types'
+import type { ChipProps } from '@/types'
 
 const COLOR = {
   yellow: css`

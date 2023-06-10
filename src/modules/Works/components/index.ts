@@ -1,3 +1,4 @@
 // Works Components
-export * from './WorksCard'
 export * from './Chip'
+export * from './WorksCard'
+export * from './WorksGallery'

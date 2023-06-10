@@ -1,22 +1,19 @@
 // Types
-import { ReactNode, MouseEvent } from 'react'
+import React, { ReactNode } from 'react'
 
 // Common
-interface ChildrenProp {
-  children?: ReactNode | ReactNode[]
-}
-
-interface ClickHandlerProp {
-  clickHandler: (fn: any) => void
+export interface ChildrenProp {
+  children?: React.ReactNode | React.ReactNode[]
 }
 
 // Component-specific
-interface LogoProps extends ClickHandlerProp {
+export interface LogoProps {
+  onClick: React.MouseEventHandler<HTMLAnchorElement>
   href: string
 }
 
-interface ButtonProps extends ChildrenProp {
-  onClick?: (event: MouseEvent<HTMLButtonElement>) => void
+export interface ButtonProps extends ChildrenProp {
+  onClick?: React.MouseEventHandler<HTMLButtonElement>
   size?: 'sm' | 'md' | 'lg'
   variant?: 'primary' | 'secondary' | 'text' | 'icon'
   as?: 'button' | 'a'
@@ -34,51 +31,84 @@ interface LinkProps extends ChildrenProp {
   rel?: string
 }
 
-interface TypographyProps extends ChildrenProp {
+export interface TypographyProps extends ChildrenProp {
   variant: Variant
   id?: string
 }
 
-interface SocialProps extends ChildrenProp {
+export type SocialLinkName = 'github' | 'linkedin' | 'skype' | 'telegram' | 'instagram'
+
+export interface SocialLinkProps {
+  linkName?: SocialLinkName
+  href: string
+}
+
+export interface SocialProps extends ChildrenProp {
+  id?: string
   data?: { href: string }[]
   vertical?: boolean
   size?: 'md' | 'lg'
 }
 
-interface PersonProps {
+export interface PersonProps {
   image?: string
 }
 
-interface StackItemProps {
-  icon: JSX.Element
+export interface WorksData {
   title: string
-  color?: any
+  text: string
+  hrefDemo: string
+  hrefRepo: string
+  imgSrc: string
+  stack: Stack[] | any[]
 }
 
-interface WorksCardProps {
-  data: {
-    title: string
-    text: string
-    hrefDemo: string
-    hrefRepo: string
-    imgSrc: string
-    stack: StackItemProps[]
-  }
+export interface WorksCardProps {
+  data: WorksData
+}
+export interface WorkGalleryProps {
+  content: WorksData[]
 }
 
-interface ChipProps extends ChildrenProp {
-  color?: 'yellow' | 'brown' | 'cyan' | 'blue' | 'sky' | 'royal' | 'indigo' | 'pink'
+export type Stack =
+  | 'js'
+  | 'ts'
+  | 'react'
+  | 'reactQuery'
+  | 'axios'
+  | 'pug'
+  | 'css'
+  | 'sass'
+  | 'tailwind'
+
+export type ChipColor =
+  | 'yellow'
+  | 'brown'
+  | 'cyan'
+  | 'blue'
+  | 'sky'
+  | 'royal'
+  | 'indigo'
+  | 'pink'
+  | 'rose'
+
+export interface ChipProps {
+  technology?: Stack
+  color?: ChipColor
 }
 
-export {
-  ChildrenProp,
-  ClickHandlerProp,
-  LogoProps,
-  ButtonProps,
-  LinkProps,
-  TypographyProps,
-  SocialProps,
-  PersonProps,
-  WorksCardProps,
-  ChipProps,
+export interface ContactsListData {
+  href: string
+  text: string
+  icon: ReactNode
+}
+
+export interface ContactsListProps {
+  id?: string
+  data: ContactsListData[]
+}
+
+export interface AddressProps {
+  contactsData: ContactsListData[]
+  socialData: SocialLinkProps[]
 }
