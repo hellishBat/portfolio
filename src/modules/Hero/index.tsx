@@ -36,35 +36,35 @@ const Hero = () => {
         opacity: 0,
         stagger: 0.15,
         duration: 1.25,
-        ease: 'sine',
+        ease: 'sine.out',
       })
       .from('#heroSubtitle', {
         yPercent: 33,
         opacity: 0,
         stagger: 0.15,
         duration: 1,
-        ease: 'sine',
+        ease: 'sine.out',
       })
       .from('#heroButton', {
         scale: 0,
         opacity: 0,
-        stagger: 0.15,
+        stagger: 0.25,
         duration: 0.75,
-        ease: 'back',
+        ease: 'back.out',
       })
       .from('#heroSocial ul li', {
         scale: 0,
         opacity: 0,
         stagger: 0.15,
         duration: 0.5,
-        ease: 'back',
+        ease: 'back.out',
       })
       .from('#heroSocial span', {
-        yPercent: 15,
+        yPercent: -25,
         opacity: 0,
-        stagger: 0.15,
-        duration: 0.5,
-        ease: 'sine',
+        stagger: 0.25,
+        duration: 0.75,
+        ease: 'back.out',
       })
 
     gsap.to('#heroSection', {

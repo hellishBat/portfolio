@@ -30,28 +30,28 @@ const About = () => {
         opacity: 0,
         stagger: 0.15,
         duration: 1,
-        ease: 'sine',
+        ease: 'sine.out',
       })
       .from('#aboutCircle', {
         scale: 0,
         opacity: 0,
-        stagger: 0.15,
+        stagger: 0.25,
         duration: 1,
-        ease: 'back',
+        ease: 'back.out',
       })
       .from('#aboutImg', {
         yPercent: 33,
         opacity: 0,
         stagger: 0.15,
         duration: 1,
-        ease: 'back',
+        ease: 'back.out',
       })
       .from('#aboutCol p', {
         yPercent: 33,
         opacity: 0,
         stagger: 0.15,
         duration: 1.25,
-        ease: 'sine',
+        ease: 'sine.out',
       })
 
     gsap.to('#aboutSection', {

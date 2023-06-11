@@ -42,28 +42,28 @@ const Contacts = () => {
         opacity: 0,
         stagger: 0.15,
         duration: 1,
-        ease: 'sine',
+        ease: 'sine.out',
       })
       .from('#contactsSection h4', {
         yPercent: 100,
         opacity: 0,
         stagger: 0.15,
         duration: 0.75,
-        ease: 'sine',
+        ease: 'sine.out',
       })
       .from('#contactsList a', {
         yPercent: 50,
         opacity: 0,
         stagger: 0.15,
         duration: 0.5,
-        ease: 'sine',
+        ease: 'sine.out',
       })
       .from('#contactsSocial li', {
         scale: 0,
         opacity: 0,
         stagger: 0.15,
         duration: 0.5,
-        ease: 'back',
+        ease: 'back.out',
       })
 
     ScrollTrigger.refresh()

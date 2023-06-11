@@ -20,6 +20,8 @@ const Skills = () => {
       .timeline({
         scrollTrigger: {
           trigger: '#skillsSection',
+          start: 'top 70%',
+          end: 'top 33%',
         },
       })
       .from('#skillsHeading', {
@@ -27,28 +29,28 @@ const Skills = () => {
         opacity: 0,
         stagger: 0.15,
         duration: 1,
-        ease: 'sine',
+        ease: 'sine.out',
       })
       .from('#skillsCloud', {
         scale: 0,
         opacity: 0,
-        stagger: 0.15,
+        stagger: 0.25,
         duration: 1,
-        ease: 'back',
+        ease: 'back.out',
       })
       .from('#skillsCol h4', {
         yPercent: 33,
         opacity: 0,
         stagger: 0.15,
         duration: 0.75,
-        ease: 'sine',
+        ease: 'sine.out',
       })
       .from('#skillsCol ul li', {
         scale: 0,
         opacity: 0,
         stagger: 0.15,
         duration: 0.25,
-        ease: 'back',
+        ease: 'back.out',
       })
 
     gsap.to('#skillsSection', {

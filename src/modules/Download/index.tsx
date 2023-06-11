@@ -28,14 +28,14 @@ const Download = () => {
         opacity: 0,
         stagger: 0.15,
         duration: 1,
-        ease: 'sine',
+        ease: 'sine.out',
       })
       .from('#downloadButton', {
         scale: 0,
         opacity: 0,
-        stagger: 0.15,
+        stagger: 0.25,
         duration: 0.75,
-        ease: 'back',
+        ease: 'back.out',
       })
 
     ScrollTrigger.refresh()

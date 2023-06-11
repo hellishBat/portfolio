@@ -66,14 +66,14 @@
 //         opacity: 0,
 //         stagger: 0.15,
 //         duration: 1,
-//         ease: 'sine',
+//         ease: 'sine.out',
 //       })
 //       .from('.swiper-slide article', {
 //         xPercent: 50,
 //         opacity: 0,
 //         stagger: 0.15,
 //         duration: 1.25,
-//         ease: 'sine',
+//         ease: 'sine.out',
 //       })
 
 //     gsap.to('#worksSection', {
@@ -223,14 +223,14 @@ const Works = () => {
         opacity: 0,
         stagger: 0.15,
         duration: 1,
-        ease: 'sine',
+        ease: 'sine.out',
       })
       .from('.swiper-slide article', {
         xPercent: 50,
         opacity: 0,
         stagger: 0.15,
         duration: 1.25,
-        ease: 'sine',
+        ease: 'back.out',
       })
 
     gsap.to('#worksSection', {
