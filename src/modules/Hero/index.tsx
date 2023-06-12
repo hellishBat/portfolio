@@ -32,10 +32,10 @@ const Hero = () => {
         },
       })
       .from('#heroTitle', {
-        yPercent: 100,
+        yPercent: 33,
         opacity: 0,
         stagger: 0.15,
-        duration: 1.25,
+        duration: 1,
         ease: 'sine.out',
       })
       .from('#heroSubtitle', {
@@ -60,10 +60,10 @@ const Hero = () => {
         ease: 'back.out',
       })
       .from('#heroSocial span', {
-        yPercent: -25,
+        yPercent: 15,
         opacity: 0,
         stagger: 0.25,
-        duration: 0.75,
+        duration: 0.5,
         ease: 'back.out',
       })
 
