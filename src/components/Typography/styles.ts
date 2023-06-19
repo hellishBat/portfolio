@@ -32,7 +32,7 @@ const Title = styled.h1`
 `
 
 const Subtitle = styled.h2`
-  margin-bottom: 1.5rem;
+  margin-bottom: 3rem;
   font-size: 1.5rem;
   font-weight: 400;
   line-height: 1.1;

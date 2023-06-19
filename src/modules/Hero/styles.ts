@@ -39,7 +39,7 @@ const SocialWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 1.5rem;
+  gap: 3rem;
 `
 
 const PointerText = styled.span`
