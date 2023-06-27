@@ -1,12 +1,12 @@
 // IconCloud
 import { useMemo, memo } from 'react'
 import { Cloud } from 'react-icon-cloud'
-import { useThemeContext } from '@/context/'
-import { useIconCloudData, useRenderCustomIcon } from '@/hooks/'
+import { useThemeContext } from '@/context'
+import { useIconCloudData, useRenderCustomIcon } from '@/hooks'
 
-export const IconCloud = memo(function IconCloud(props: any) {
+export const IconCloud = memo(({ iconSlugs }: { iconSlugs: string[] }) => {
   const { mode } = useThemeContext()
-  const data = useIconCloudData(props.iconSlugs)
+  const data = useIconCloudData(iconSlugs)
   const renderCustomIcon = useRenderCustomIcon()
 
   const cloudProps: any = {
@@ -36,13 +36,12 @@ export const IconCloud = memo(function IconCloud(props: any) {
       return null
     }
 
-    const icons = []
-    for (const key of Object.keys(data.simpleIcons)) {
-      icons.push(data.simpleIcons[key])
-    }
+    const icons = Object.values(data.simpleIcons)
 
     return icons.map((i) => renderCustomIcon(i, mode))
   }, [data, mode, renderCustomIcon])
 
-  return <Cloud {...cloudProps}>{renderedIcons}</Cloud>
+  return <Cloud {...cloudProps}>{[renderedIcons]}</Cloud>
 })
+
+IconCloud.displayName = 'IconCloud'

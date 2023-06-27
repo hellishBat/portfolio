@@ -34,4 +34,5 @@ export interface Theme {
 export type ThemeSwitchButtonProps = {
   onClick: () => void
   mode: Mode
+  animate?: boolean
 }
