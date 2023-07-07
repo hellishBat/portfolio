@@ -1,5 +1,5 @@
 // Header
-import { useMobileMenuContext, useThemeContext } from '@/context'
+import { useMobileMenuStore, useThemeStore } from '@/store'
 import { Container } from '@/components'
 import { Nav, Logo, MenuButton, ThemeSwitch, ScrollIndicator } from './components'
 import { scrollToTop } from '@/utils/scrolling'
@@ -10,9 +10,9 @@ import data from '@/data/index.json'
 const navData = data.nav
 
 const Header = () => {
-  const { isOpen, toggleMenu } = useMobileMenuContext()
+  const { isOpen, toggleMenu } = useMobileMenuStore()
 
-  const { mode, changeMode } = useThemeContext()
+  const { mode, changeMode } = useThemeStore()
 
   const toggleMode = () => {
     changeMode(mode === Mode.Light ? Mode.Dark : Mode.Light)

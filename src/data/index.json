@@ -59,9 +59,10 @@
     "list": [
       "HTML",
       "CSS (BEM, RWD)",
-      "JavaScript (ES6)",
+      "JavaScript",
       "TypeScript",
       "React",
+      "Zustand",
       "React Query",
       "React Router",
       "Axios",

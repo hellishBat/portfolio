@@ -1,5 +1,4 @@
 // Home
-import ContextProviders from '@/context/ContextProviders'
 import Layout from '@/layouts/Layout'
 import Hero from '@/modules/Hero'
 import About from '@/modules/About'
@@ -10,16 +9,14 @@ import Contacts from '@/modules/Contacts'
 
 const Home = () => {
   return (
-    <ContextProviders>
-      <Layout>
-        <Hero />
-        <About />
-        <Skills />
-        <Works />
-        <Download />
-        <Contacts />
-      </Layout>
-    </ContextProviders>
+    <Layout>
+      <Hero />
+      <About />
+      <Skills />
+      <Works />
+      <Download />
+      <Contacts />
+    </Layout>
   )
 }
 

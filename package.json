@@ -89,7 +89,8 @@
     "react-icon-cloud": "^4.1.4",
     "reseter.css": "^2.0.0",
     "styled-components": "^5.3.9",
-    "swiper": "^9.1.1"
+    "swiper": "^9.1.1",
+    "zustand": "^4.3.9"
   },
   "browserslist": {
     "production": [

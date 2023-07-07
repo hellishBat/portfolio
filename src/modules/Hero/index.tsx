@@ -1,7 +1,7 @@
 // Hero
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import { useThemeContext } from '@/context'
+import { useThemeStore } from '@/store'
 import { Container, Typography, Button, Social } from '@/components'
 import { useIsomorphicLayoutEffect, useNav } from '@/hooks'
 import { scrollToSection } from '@/utils/scrolling'
@@ -21,7 +21,7 @@ const handleClick = (e: { preventDefault: () => void }) => {
 }
 
 const Hero = () => {
-  const { mode } = useThemeContext()
+  const { mode } = useThemeStore()
   const heroRef = useNav('Hero')
 
   useIsomorphicLayoutEffect(() => {

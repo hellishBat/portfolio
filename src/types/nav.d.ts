@@ -1,9 +1,9 @@
 // Nav Types
 import { MutableRefObject } from 'react'
 
-export interface NavContextValue {
+export interface NavStore {
   activeNavLinkId: string
-  setActiveNavLinkId: (id: string) => void
+  setActiveNavLinkId: (linkId: string) => void
 }
 
 export interface NavLinkProps {

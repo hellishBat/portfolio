@@ -1,18 +1,14 @@
 // Theme Types
-import { ReactNode } from 'react'
 
 export enum Mode {
   Light = 'light',
   Dark = 'dark',
 }
 
-export interface ThemeProviderProps {
-  children: ReactNode
-}
-
-export interface ThemeContextValue {
-  changeMode: (mode: Mode) => void
+export interface ThemeStore {
+  theme: Theme
   mode: Mode
+  changeMode: (mode: Mode) => void
 }
 
 export interface ThemeColorPalette {

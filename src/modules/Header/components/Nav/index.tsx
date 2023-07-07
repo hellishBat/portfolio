@@ -1,12 +1,12 @@
 // Nav
 import { FC } from 'react'
-import { useMobileMenuContext } from '@/context'
+import { useMobileMenuStore } from '@/store'
 import { NavLink } from '../'
 import * as S from './styles'
 import { NavDataProps } from '@/types/nav'
 
 export const Nav: FC<NavDataProps> = ({ data }) => {
-  const { isOpen, toggleMenu, openMenu, closeMenu } = useMobileMenuContext()
+  const { isOpen, toggleMenu, openMenu, closeMenu } = useMobileMenuStore()
 
   return (
     <S.Nav isOpen={isOpen}>

@@ -1,6 +1,5 @@
 // Layout
 import { FC } from 'react'
-import MobileMenuProvider from '@/context/MobileMenuContext'
 import Loader from '@/modules/Loader'
 import Header from '@/modules/Header'
 import Footer from '@/modules/Footer'
@@ -16,9 +15,7 @@ const Layout: FC<ChildrenProp> = ({ children }) => {
         <Loader />
       ) : (
         <>
-          <MobileMenuProvider>
-            <Header />
-          </MobileMenuProvider>
+          <Header />
           <main>{children}</main>
           <Footer />
         </>
