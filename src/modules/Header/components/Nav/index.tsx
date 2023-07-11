@@ -3,9 +3,9 @@ import { FC } from 'react'
 import { useMobileMenuStore } from '@/store'
 import { NavLink } from '../'
 import * as S from './styles'
-import { NavDataProps } from '@/types/nav'
+import { NavProps } from '@/types/nav'
 
-export const Nav: FC<NavDataProps> = ({ data }) => {
+export const Nav: FC<NavProps> = ({ data }) => {
   const { isOpen, toggleMenu, openMenu, closeMenu } = useMobileMenuStore()
 
   return (

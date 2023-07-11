@@ -1,9 +1,9 @@
 // MenuButton Styles
 import styled, { css } from 'styled-components'
 import { media } from '@/styles/media'
-import { MobileMenuProps } from '@/types/mobileMenu'
+import { MobileMenuButtonProps } from '@/types/mobileMenu'
 
-export const Button = styled.button<MobileMenuProps>`
+export const Button = styled.button<MobileMenuButtonProps>`
   position: relative;
   z-index: 102;
   display: flex;

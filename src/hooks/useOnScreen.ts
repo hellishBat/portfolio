@@ -1,7 +1,8 @@
 // useOnScreen
-import { useState, useEffect, useMemo, MutableRefObject } from 'react'
+import { useState, useEffect, useMemo } from 'react'
+import type { ElementRef } from '@/types/nav'
 
-export const useOnScreen = (ref: MutableRefObject<Element | null>): boolean => {
+export const useOnScreen = (ref: ElementRef): boolean => {
   const [isOnScreen, setOnScreen] = useState<boolean>(false)
 
   const observer = useMemo(() => {

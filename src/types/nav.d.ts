@@ -13,8 +13,8 @@ export interface NavLinkProps {
   onClick?: () => void
 }
 
-export type NavDataProps = {
+export interface NavProps {
   data: NavLinkProps[]
 }
 
-export type NavRef = MutableRefObject<HTMLElement | null>
+export type ElementRef = MutableRefObject<HTMLElement | null>
