@@ -26,4 +26,10 @@ const Wrapper = styled.div`
   align-items: center;
 `
 
-export { Header, Wrapper }
+const Buttons = styled.div`
+  display: flex;
+  margin-right: -0.5rem;
+  margin-left: auto;
+`
+
+export { Header, Wrapper, Buttons }

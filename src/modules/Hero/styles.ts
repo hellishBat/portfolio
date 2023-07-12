@@ -10,6 +10,7 @@ const Section = styled.section<HeroProps>`
   z-index: 0;
   background-image: url('${({ imageUrl }) => imageUrl}');
   background-size: cover;
+  background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center;
   color: var(--color-white);

@@ -15,7 +15,6 @@ export const Button = styled.button<{ animate?: boolean }>`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: auto;
   padding: 0.5rem;
   border-radius: 50%;
 

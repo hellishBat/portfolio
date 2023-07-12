@@ -24,8 +24,10 @@ const Header = () => {
         <S.Wrapper>
           <Logo href="#" onClick={scrollToTop} />
           <Nav data={navData} />
-          <ThemeSwitch onClick={toggleMode} mode={mode} />
-          <MenuButton onClick={toggleMenu} isOpen={isOpen} />
+          <S.Buttons>
+            <ThemeSwitch onClick={toggleMode} mode={mode} />
+            <MenuButton onClick={toggleMenu} isOpen={isOpen} />
+          </S.Buttons>
         </S.Wrapper>
       </Container>
       <ScrollIndicator />
