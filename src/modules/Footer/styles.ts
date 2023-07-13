@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 const Footer = styled.footer`
   padding: 2rem 0;
-  background-color: ${({ theme }) => theme.colors.secondary};
+  background-color: ${({ theme }) => theme.colors.primary};
   font-size: 0.75rem;
 `
 

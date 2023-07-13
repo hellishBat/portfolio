@@ -2,12 +2,12 @@
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useIsomorphicLayoutEffect, useNav } from '@/hooks'
-import { Container, Typography } from '@/components'
+import { Container, Typography, Button } from '@/components'
 import { Person } from './components'
 import * as S from './styles'
 import * as SC from '@/styles/common'
 import data from '@/data/index.json'
-import { authorPhoto } from '@/assets'
+import { authorPhoto, IconDownload } from '@/assets'
 
 const aboutData = data.about
 
@@ -53,6 +53,13 @@ const About = () => {
         duration: 1.25,
         ease: 'sine.out',
       })
+      .from('#downloadButton', {
+        scale: 0,
+        opacity: 0,
+        stagger: 0.25,
+        duration: 0.75,
+        ease: 'back.out',
+      })
 
     gsap.to('#aboutSection', {
       scrollTrigger: {
@@ -81,6 +88,17 @@ const About = () => {
                 {paragraph.text}
               </Typography>
             ))}
+            <Button
+              id="downloadButton"
+              size="md"
+              variant="primary"
+              as="a"
+              href={aboutData.btn.href}
+              download
+            >
+              <IconDownload />
+              {aboutData.btn.label}
+            </Button>
           </S.Col>
         </S.Content>
       </Container>
