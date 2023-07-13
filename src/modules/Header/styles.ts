@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { media } from '@/styles/media'
 
 const Header = styled.header`
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 100;

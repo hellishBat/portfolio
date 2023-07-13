@@ -83,6 +83,8 @@ html,
 }
 
 body {
+  position: relative;
+  margin-top: var(--header-height);
   background-color: ${({ theme }) => theme.colors.primary};
   font-size: 16px;
   line-height: 1.5;
@@ -109,6 +111,7 @@ body {
 main {
   flex: 1 0 auto;
   overflow-x: hidden;
+  z-index: 0;
 }
 
 header,
