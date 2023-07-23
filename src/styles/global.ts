@@ -64,14 +64,19 @@ const GlobalStyles = createGlobalStyle`
 
   ${media.xxl} {
     --max-width: ${mxWidth.xxl};
-    
   }
 
   // Spacing
+  --header-height: 3.5rem;
   --spacing-sm: 1rem;
-  
+    
   ${media.sm} {
+    --header-height: 4.5rem;
     --spacing-sm: 1.5rem;
+  }
+
+  ${media.lg} {
+    --header-height: 5rem;
   }
 }
 
