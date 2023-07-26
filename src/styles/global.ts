@@ -89,7 +89,6 @@ html,
 
 body {
   position: relative;
-  margin-top: var(--header-height);
   background-color: ${({ theme }) => theme.colors.primary};
   font-size: 16px;
   line-height: 1.5;

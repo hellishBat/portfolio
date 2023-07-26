@@ -26,11 +26,7 @@ export const Button = styled.button<{ animate?: boolean }>`
   ${media.md} {
     &:hover {
       color: ${({ theme }) => theme.colors.accent};
-      transition: all 0.25s ease-out;
-
-      > svg {
-        transform: scale(1.2);
-      }
+      transition: color 0.25s ease-out;
     }
   }
 

@@ -50,7 +50,7 @@ const About = () => {
         yPercent: 33,
         opacity: 0,
         stagger: 0.15,
-        duration: 1.25,
+        duration: 0.75,
         ease: 'sine.out',
       })
       .from('#downloadButton', {

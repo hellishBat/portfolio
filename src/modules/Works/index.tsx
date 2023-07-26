@@ -63,10 +63,10 @@ const Works = () => {
         ease: 'sine.out',
       })
       .from('.swiper-slide article', {
-        xPercent: 50,
+        xPercent: 33,
         opacity: 0,
         stagger: 0.15,
-        duration: 1.25,
+        duration: 1,
         ease: 'back.out',
       })
 

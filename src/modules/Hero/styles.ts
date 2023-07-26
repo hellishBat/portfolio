@@ -8,6 +8,7 @@ interface HeroProps {
 const Section = styled.section<HeroProps>`
   position: relative;
   z-index: 0;
+  margin-top: var(--header-height);
   background-image: url('${({ imageUrl }) => imageUrl}');
   background-size: cover;
   background-attachment: fixed;

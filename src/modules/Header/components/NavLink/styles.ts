@@ -18,7 +18,7 @@ export const Link = styled.a`
     display: block;
     background-color: currentColor;
     transform: scaleX(0);
-    transition: transform 0.25s ease-out 0s;
+    transition: transform 0.25s ease-out;
     content: '';
   }
 
