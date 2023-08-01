@@ -50,6 +50,10 @@ export interface SocialProps extends ChildrenProp {
   size?: 'md' | 'lg'
 }
 
+export interface HeroProps {
+  imageUrl: string
+}
+
 export interface PersonProps {
   image?: string
 }

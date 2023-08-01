@@ -2,7 +2,7 @@
 import styled from 'styled-components'
 import { media } from '@/styles/media'
 
-const Content = styled.div`
+export const Content = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -22,11 +22,3 @@ const Content = styled.div`
     gap: 6rem;
   }
 `
-
-const Col = styled.div`
-  > p:last-of-type {
-    margin-bottom: 1.5rem;
-  }
-`
-
-export { Content, Col }

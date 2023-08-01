@@ -29,7 +29,7 @@ export const DarkTheme: Theme = {
     secondaryGradient:
       'linear-gradient(135deg, #333333, #2f2f2f, #2b2b2b, #282828, #242424, #202020, #1d1d1d, #191919)',
     // Accent
-    accent: '#6667ab',
+    accent: 'hsl(246, 22%, 47%)',
     accentHovered: '#46467f',
     accentGradient:
       'linear-gradient(135deg, #6667ab, #6765a9, #6863a7, #6961a5, #6a5fa3, #6a5da0, #6b5b9e, #6c599c)',

@@ -1,9 +1,6 @@
 // Hero Styles
 import styled from 'styled-components'
-
-interface HeroProps {
-  imageUrl: string
-}
+import { HeroProps } from '@/types'
 
 const Section = styled.section<HeroProps>`
   position: relative;
@@ -11,7 +8,6 @@ const Section = styled.section<HeroProps>`
   margin-top: var(--header-height);
   background-image: url('${({ imageUrl }) => imageUrl}');
   background-size: cover;
-  background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center;
   color: var(--color-white);

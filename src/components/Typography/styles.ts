@@ -48,7 +48,6 @@ const Subtitle = styled.h2`
 `
 
 const Heading = styled.h3`
-  position: relative;
   margin: 0 0 2rem 0;
   font-size: 1.875rem;
   line-height: 1;

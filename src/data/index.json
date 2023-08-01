@@ -21,6 +21,11 @@
       "text": "Recent works"
     },
     {
+      "linkId": "Download",
+      "targetId": "downloadSection",
+      "text": "Download CV"
+    },
+    {
       "linkId": "Contacts",
       "targetId": "contactsSection",
       "text": "Get in touch"
@@ -46,11 +51,7 @@
       {
         "text": "If I were to describe myself in one sentence, it would be a versatile outgoing guy, an admirer of good music and movies, and a technology enthusiast."
       }
-    ],
-    "btn": {
-      "label": "Download CV",
-      "href": "https://drive.google.com/uc?export=download&id=19g5iYEhRUQ_ayui3ImCVv3RdRyi1SHwh"
-    }
+    ]
   },
   "skills": {
     "heading": "Skills",
@@ -164,6 +165,13 @@
       }
     ],
     "btn": { "demo": "Demo", "code": "Code" }
+  },
+  "download": {
+    "heading": "Download CV",
+    "btn": {
+      "label": "Download CV",
+      "href": "https://drive.google.com/uc?export=download&id=19g5iYEhRUQ_ayui3ImCVv3RdRyi1SHwh"
+    }
   },
   "contacts": {
     "heading": "Get in touch",

@@ -2,12 +2,12 @@
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useIsomorphicLayoutEffect, useNav } from '@/hooks'
-import { Container, Typography, Button } from '@/components'
+import { Container, Typography } from '@/components'
 import { Person } from './components'
 import * as S from './styles'
 import * as SC from '@/styles/common'
 import data from '@/data/index.json'
-import { authorPhoto, IconDownload } from '@/assets'
+import { authorPhoto } from '@/assets'
 
 const aboutData = data.about
 
@@ -82,24 +82,13 @@ const About = () => {
         </Typography>
         <S.Content>
           <Person image={authorPhoto} />
-          <S.Col id="aboutCol">
+          <div id="aboutCol">
             {aboutData.description.map((paragraph, idx) => (
               <Typography variant="p" key={idx}>
                 {paragraph.text}
               </Typography>
             ))}
-            <Button
-              id="downloadButton"
-              size="md"
-              variant="primary"
-              as="a"
-              href={aboutData.btn.href}
-              download
-            >
-              <IconDownload />
-              {aboutData.btn.label}
-            </Button>
-          </S.Col>
+          </div>
         </S.Content>
       </Container>
     </SC.Section>
