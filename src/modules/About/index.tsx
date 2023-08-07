@@ -53,13 +53,6 @@ const About = () => {
         duration: 0.75,
         ease: 'sine.out',
       })
-      .from('#downloadButton', {
-        scale: 0,
-        opacity: 0,
-        stagger: 0.25,
-        duration: 0.75,
-        ease: 'back.out',
-      })
 
     gsap.to('#aboutSection', {
       scrollTrigger: {

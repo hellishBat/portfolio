@@ -33,7 +33,7 @@ const Inner = styled.div`
   min-height: 45vh;
 `
 
-const SocialWrapper = styled.div`
+const SocialCol = styled.aside`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -57,4 +57,4 @@ const PointerText = styled.span`
   }
 `
 
-export { Section, Inner, SocialWrapper, PointerText }
+export { Section, Inner, SocialCol, PointerText }

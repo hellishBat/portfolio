@@ -104,10 +104,10 @@ const Hero = () => {
               <IconArrowRight />
             </Button>
           </div>
-          <S.SocialWrapper id="heroSocial">
+          <S.SocialCol id="heroSocial">
             <Social data={socialLinks} vertical size="md" />
             <S.PointerText>{heroData.pointer}</S.PointerText>
-          </S.SocialWrapper>
+          </S.SocialCol>
         </S.Inner>
       </Container>
     </S.Section>
