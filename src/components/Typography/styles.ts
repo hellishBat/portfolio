@@ -7,7 +7,6 @@ const Title = styled.h1`
   font-weight: 300;
   line-height: 1;
   font-size: 3.75rem;
-  font-size: 3rem;
 
   > strong {
     font-weight: 700;
